@@ -1,3 +1,6 @@
+import time
+def swap(a, b):
+    return b, a
 def insertion_sort_r():
     with open('input.txt', 'r') as file:
         n = -1
@@ -14,13 +17,14 @@ def insertion_sort_r():
                 key = input_list[j]
                 i = j - 1
                 while i >= 0 and input_list[i] < key:  # направление знака меняется
-                    input_list[i + 1] = input_list[i]
+                    input_list[i + 1], input_list[i] = swap(input_list[i + 1], input_list[i])
                     i = i - 1
-                input_list[i + 1] = key
             with open('output.txt', 'w') as ans:
                 ans.write(' '.join(map(str, input_list)))
 
 
+t_start = time.perf_counter()
+print("Время работы %s:", (time.perf_counter() - t_start))
 insertion_sort_r()
 
 

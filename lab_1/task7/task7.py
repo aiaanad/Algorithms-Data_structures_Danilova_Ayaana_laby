@@ -1,3 +1,4 @@
+import time
 def sortland():
     with open('input.txt') as file:
         n = -1
@@ -28,4 +29,7 @@ def sortland():
                         ans.write(str(id_numbers[0]) + ' ' + str(id_numbers[n // 2]) + ' ' + str(id_numbers[n - 1]))
 
 
+t_start = time.perf_counter()
+print("Время работы %s:", (time.perf_counter() - t_start))
 sortland()
+

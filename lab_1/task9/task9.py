@@ -1,3 +1,4 @@
+import time
 def binary_addition():
     with open('input.txt', 'r') as file:
         for line in file:
@@ -17,5 +18,6 @@ def binary_addition():
         with open('output.txt', 'w') as ans:
             ans.write(''.join(map(str, c)))
 
-
+t_start = time.perf_counter()
+print("Время работы %s:", (time.perf_counter() - t_start))
 binary_addition()

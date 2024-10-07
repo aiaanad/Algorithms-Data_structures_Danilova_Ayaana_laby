@@ -1,3 +1,6 @@
+import time
+t_start = time.perf_counter()
+print("Время работы %s:", (time.perf_counter() - t_start))
 with open('input.txt') as file:
     n = -1
     for line in file:
@@ -38,3 +41,4 @@ with open('input.txt') as file:
                         right.append(elem)
                 with open('output.txt', 'w') as ans:
                     ans.write(''.join(left) + mid + ''.join(right[::-1]))
+

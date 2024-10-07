@@ -1,3 +1,4 @@
+import time
 def insertion_sort():
     with open('input.txt', 'r') as file:
         n = -1
@@ -21,4 +22,6 @@ def insertion_sort():
                 ans.write(' '.join(map(str, input_list)))
 
 
+t_start = time.perf_counter()
+print("Время работы %s:", (time.perf_counter() - t_start))
 insertion_sort()
