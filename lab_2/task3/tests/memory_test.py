@@ -1,6 +1,6 @@
 import random
 import tracemalloc
-from lab_2.task3.task3 import inversion_number
+from lab_2.task3.src.task3 import inversion_number
 
 
 def max_input():

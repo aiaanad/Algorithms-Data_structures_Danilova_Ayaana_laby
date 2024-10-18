@@ -1,5 +1,5 @@
 import unittest
-from lab_2.task8.task8 import polynomial_mult
+from lab_2.task8.src.task8 import polynomial_mult
 
 
 class PolynomialMultTestCase(unittest.TestCase):

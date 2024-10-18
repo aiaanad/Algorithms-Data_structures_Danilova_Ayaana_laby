@@ -1,5 +1,5 @@
 import unittest
-from lab_2.task5.task5 import majority
+from lab_2.task5.src.task5 import majority
 
 
 class Majority(unittest.TestCase):

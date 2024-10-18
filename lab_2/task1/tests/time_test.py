@@ -1,5 +1,5 @@
 import time
-from lab_2.task1.task1 import mergeSort
+from lab_2.task1.src.task1 import mergeSort
 
 
 def max_input():

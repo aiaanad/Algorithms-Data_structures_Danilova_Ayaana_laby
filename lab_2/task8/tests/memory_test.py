@@ -1,6 +1,6 @@
 import random
 import tracemalloc
-from lab_2.task8.task8 import polynomial_mult
+from lab_2.task8.src.task8 import polynomial_mult
 
 
 def max_input():

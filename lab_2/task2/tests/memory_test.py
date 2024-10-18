@@ -1,6 +1,6 @@
 import random
 import tracemalloc
-from lab_2.task2.task2 import mergeSort
+from lab_2.task2.src.task2 import mergeSort
 
 
 def max_input():
