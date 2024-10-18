@@ -4,60 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e1dd7a0-9b0e-4570-9019-e92bca215b78" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lab_1/.idea/lab_1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task1/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task1/src/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task1/src/output.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task1/src/task1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task1/tests/memory_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task1/tests/test_merge_sort.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task1/tests/time_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task2/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task2/src/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task2/src/output.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task2/src/task2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task2/tests/memory_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task2/tests/test_merge_sort.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task2/tests/time_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task3/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task3/src/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task3/src/output.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task3/src/proverka.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task3/src/task3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task3/tests/memory_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task3/tests/test_inversion_number.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task3/tests/time_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task4/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task4/src/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task4/src/output.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task4/src/task4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task4/tests/memory_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task4/tests/test_binary_search.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task4/tests/time_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task5/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task5/src/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task5/src/output.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task5/src/task5.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task5/tests/memory_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task5/tests/test_majority.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task5/tests/time_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task8/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task8/src/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task8/src/output.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task8/src/proverka.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task8/src/task8.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task8/tests/memory_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task8/tests/test_polynomial_mult.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task8/tests/time_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_07_10_2024_20_28_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_07_10_2024_20_28__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_1/README.me" beforeDir="false" afterPath="$PROJECT_DIR$/lab_1/README.me" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_1/task1/лаба 1 аисд.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_insertion_sort.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/.gitignore" afterDir="false" />
-    </list>
+    <list default="true" id="9e1dd7a0-9b0e-4570-9019-e92bca215b78" name="Changes" comment="Добавила вторую лабораторную" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -156,6 +103,19 @@
       <option name="presentableId" value="Default" />
       <updated>1728407117085</updated>
     </task>
+    <task id="LOCAL-00001" summary="Добавила вторую лабораторную">
+      <option name="closed" value="true" />
+      <created>1729285024470</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1729285024470</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Добавила вторую лабораторную" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавила вторую лабораторную" />
   </component>
 </project>
