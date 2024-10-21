@@ -1,4 +1,5 @@
 from math import *
+from lab_2.task1.src.utils import f_read_3, f_write
 
 
 def binary(lenarr, array):
@@ -39,12 +40,6 @@ def polynomial_mult(n, a, b):
     return answer[len(answer) - 2 * real_n + 1:]
 
 
-'''
-file = open('input.txt', 'r')
-poly_ord = int(file.readline())
-array_a = [int(elem) for elem in file.readline().split()]
-array_b = [int(elem) for elem in file.readline().split()]
-file.close()
-with open('output.txt', 'w') as ans:
-    ans.write('C = ' + '(' + ','.join(map(str, polynomial_mult(poly_ord, array_a, array_b))) + ')')
-'''
+if __name__ == "__main__":
+    num, array1, array2 = f_read_3()
+    f_write('C = ' + '(' + ','.join(map(str, polynomial_mult(num, array1, array2))) + ')')

@@ -1,3 +1,6 @@
+from lab_2.task1.src.utils import f_read, f_write, check
+
+
 def merge(arr, left, m, right):
     n1 = m - left + 1
     n2 = right - m
@@ -34,10 +37,8 @@ def merge(arr, left, m, right):
         j += 1
         k += 1
 
-'''
-    with open('output.txt', 'a') as answer:
-        answer.write(str(left + 1) + ' ' + str(right + 1) + ' ' + str(arr[left]) + ' ' + str(arr[right]) + '\n')
-'''
+    coordinates = str(left + 1) + ' ' + str(right + 1) + ' ' + str(arr[left]) + ' ' + str(arr[right]) + '\n'
+    f_write(coordinates)
 
 
 def mergeSort(arr, left, right):
@@ -51,17 +52,10 @@ def mergeSort(arr, left, right):
         return arr
 
 
-'''
-result = ''
-file = open('input.txt', 'r')
-n = int(file.readline())
-data = [int(elem) for elem in file.readline().split() if abs(int(elem)) <= 10e9]
-file.close()
-with open('output.txt', 'w') as ans:
-    if not (1 <= n <= 10e3 and n == len(data)):
-        ans.write('---Incorrect data---')
+if __name__ == "__main__":
+    n, array = f_read()
+    if check(n, array):
+        result = mergeSort(array, 0, n - 1)
+        f_write(result)
     else:
-        result = ' '.join(map(str, mergeSort(data, 0, n - 1)))
-with open('output.txt', 'w') as ans:
-    ans.write(result)
-'''
+        f_write('---Incorrect data---')

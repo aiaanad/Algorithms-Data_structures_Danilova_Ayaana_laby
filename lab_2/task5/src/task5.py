@@ -1,8 +1,8 @@
 from lab_2.task1.src.task1 import mergeSort
+from lab_2.task1.src.utils import f_read, f_write, check
 
 
 def majority(n, array):
-
     mergeSort(array, 0, n - 1)
     mid = (0 + n) // 2
     first_entry = array.index(array[mid])
@@ -13,14 +13,9 @@ def majority(n, array):
         return 0
 
 
-'''
-file = open('input.txt', 'r')
-n = int(file.readline())
-array = [int(elem) for elem in file.readline().split() if 1 <= int(elem) <= 10e9]
-file.close()
-with open('output.txt', 'w') as ans:
-    if not (1 <= n <= 10e5 and len(array) == n):
-        ans.write('---Incorrect data---')
+if __name__ == "__main__":
+    n, array = f_read()
+    if check(n, array):
+        f_write(majority(n, array))
     else:
-        ans.write(str(majority(n, array)))
-'''
+        f_write('---Incorrect data---')

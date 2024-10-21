@@ -1,3 +1,6 @@
+from lab_2.task1.src.utils import f_read_2, f_write, check
+
+
 def binary_search(len1: int, search_in: list, len2: int, the_search: list):
 
     answer = [-1] * len2
@@ -20,16 +23,9 @@ def binary_search(len1: int, search_in: list, len2: int, the_search: list):
     return answer
 
 
-'''
-file = open('input.txt', 'r')
-n1 = int(file.readline())
-data1 = [int(elem) for elem in file.readline().split() if 1 <= int(elem) <= 10e9]
-n2 = int(file.readline())
-data2 = [int(elem) for elem in file.readline().split() if 1 <= int(elem) <= 10e9]
-file.close()
-with open('output.txt', 'w') as ans:
-    if not 1 <= min(n1, n2) <= max(n1, n2) <= 10e3 and (n1 == len(data1) and n2 == len(data2)):
-        ans.write('---Incorrect data---')
+if __name__ == "__main__":
+    n1, array1, n2, array2 = f_read_2()
+    if check(n1, array1) and check(n2, array2):
+        f_write(binary_search(n1, array1, n2, array2))
     else:
-        ans.write(' '.join(map(str, binary_search(n1, data1, n2, data2))))
-'''
+        f_write('---Incorrect data---')

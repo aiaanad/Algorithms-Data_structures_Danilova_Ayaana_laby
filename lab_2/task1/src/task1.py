@@ -1,10 +1,12 @@
-def merge(arr, l, m, r):
+from lab_2.task1.src.utils import f_read, f_write, check
 
+
+def merge(arr, l, m, r):
     n1 = m - l + 1
     n2 = r - m
 
-    L = [0] * (n1)
-    R = [0] * (n2)
+    L = [0] * n1
+    R = [0] * n2
 
     for i in range(0, n1):
         L[i] = arr[l + i]
@@ -38,7 +40,6 @@ def merge(arr, l, m, r):
 
 def mergeSort(arr, l, r):
     if l < r:
-
         m = l + (r - l) // 2
 
         # Sort first and second halves
@@ -49,16 +50,10 @@ def mergeSort(arr, l, r):
     return arr
 
 
-'''
-file = open('input.txt', 'r')
-n = int(file.readline())
-data = [int(elem) for elem in file.readline().split() if abs(int(elem)) <= 10e9]
-file.close()
-with open('output.txt', 'w') as ans:
-    if not (1 <= n <= 10e3 and n == len(data)):
-        ans.write('---Incorrect data---')
+if __name__ == "__main__":
+    n, array = f_read()
+    if check(n, array):
+        result = mergeSort(array, 0, n - 1)
+        f_write(result)
     else:
-        ans.write(' '.join(map(str, mergeSort(data, 0, n - 1))))
-'''
-
-
+        f_write('---Incorrect data---')

@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e1dd7a0-9b0e-4570-9019-e92bca215b78" name="Changes" comment="Добавила вторую лабораторную" />
+    <list default="true" id="9e1dd7a0-9b0e-4570-9019-e92bca215b78" name="Changes" comment="Добавила вторую лабораторную">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_1/task1/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_2/task1/src/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/task1/src/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/task1/src/output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/task1/src/task1.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/task1/src/task1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/task2/src/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/task2/src/output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/task2/src/task2.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/task2/src/task2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/task2/tests/memory_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/task2/tests/memory_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/task3/src/task3.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/task3/src/task3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/task4/src/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/task4/src/output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/task4/src/task4.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/task4/src/task4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/task5/src/task5.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/task5/src/task5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/task8/src/task8.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/task8/src/task8.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,6 +73,7 @@
     "Python.task2.executor": "Run",
     "Python.task3.executor": "Run",
     "Python.task3_console.executor": "Run",
+    "Python.task4.executor": "Run",
     "Python.task4_console.executor": "Run",
     "Python.task5.executor": "Run",
     "Python.task5_evreyski.executor": "Run",
@@ -65,6 +81,7 @@
     "Python.time_test.executor": "Run",
     "Python.time_test_min_max.executor": "Run",
     "Python.unittest.executor": "Run",
+    "Python.utils.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
@@ -111,7 +128,23 @@
       <option name="project" value="LOCAL" />
       <updated>1729285024470</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Добавила вторую лабораторную">
+      <option name="closed" value="true" />
+      <created>1729285122585</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1729285122585</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Добавила вторую лабораторную">
+      <option name="closed" value="true" />
+      <created>1729285146920</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1729285146920</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

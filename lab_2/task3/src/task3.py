@@ -1,5 +1,7 @@
-def merge(arr, left, m, r):
+from lab_2.task1.src.utils import f_read, f_write, check
 
+
+def merge(arr, left, m, r):
     global local_var
     n1 = m - left + 1
     n2 = r - m
@@ -56,17 +58,9 @@ def inversion_number(lenarr, arr):
     return local_var
 
 
-'''
-with open('output.txt', 'w') as ans:
-    file = open('input.txt', 'r')
-    n = int(file.readline())
-    array = [int(elem) for elem in file.readline().split() if 1 <= int(elem) <= 10e9]
-    file.close()
-    if not (1 <= n <= 10e3 and len(array) == n):
-        ans.write('---Incorrect data---')
+if __name__ == "__main__":
+    n, array = f_read()
+    if check(n, array):
+        f_write(inversion_number(n, array))
     else:
-        ans.write(str(inversion_number(n, array)))
-'''
-
-
-
+        f_write("---Incorrect data---")

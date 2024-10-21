@@ -23,6 +23,7 @@ def min_input():
     tracemalloc.stop()
 
 
+
 min_input()
 print()
 max_input()
