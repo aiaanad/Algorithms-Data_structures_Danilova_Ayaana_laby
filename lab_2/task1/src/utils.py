@@ -1,5 +1,5 @@
 def f_read():
-    file = open('input.txt', 'r')
+    file = open('../txtf/input.txt', 'r')
     n = int(file.readline())
     array = [int(elem) for elem in file.readline().split()]
     file.close()
@@ -7,7 +7,7 @@ def f_read():
 
 
 def f_read_2():
-    file = open('input.txt', 'r')
+    file = open('../txtf/input.txt', 'r')
     n1 = int(file.readline())
     array1 = [int(elem) for elem in file.readline().split()]
     n2 = int(file.readline())
@@ -17,7 +17,7 @@ def f_read_2():
 
 
 def f_read_3():
-    file = open('input.txt', 'r')
+    file = open('../txtf/input.txt', 'r')
     n = int(file.readline())
     array1 = [int(elem) for elem in file.readline().split()]
     array2 = [int(elem) for elem in file.readline().split()]
@@ -33,7 +33,7 @@ def check(n, array):
 
 
 def f_write(answer):
-    with open('output.txt', 'a') as file:
+    with open('../txtf/output.txt', 'a') as file:
         if type(answer) == list:
             answer = ' '.join(map(str, answer)) + '\n'
         elif type(answer) == int:
