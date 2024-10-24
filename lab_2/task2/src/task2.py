@@ -1,4 +1,4 @@
-from lab_2.task1.src.utils import f_read, f_write, check
+from lab_2.task1.src.utils import *
 
 
 def merge(arr, left, m, right):
@@ -48,14 +48,8 @@ def mergeSort(arr, left, right):
         mergeSort(arr, left, m)
         mergeSort(arr, m + 1, right)
         merge(arr, left, m, right)
-
         return arr
 
 
 if __name__ == "__main__":
-    n, array = f_read()
-    if check(n, array):
-        result = mergeSort(array, 0, n - 1)
-        f_write(result)
-    else:
-        f_write('---Incorrect data---')
+    work(mergeSort, 0)

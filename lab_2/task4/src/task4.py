@@ -1,4 +1,4 @@
-from lab_2.task1.src.utils import f_read_2, f_write, check
+from lab_2.task1.src.utils import *
 
 
 def binary_search(len1: int, search_in: list, len2: int, the_search: list):
@@ -24,8 +24,4 @@ def binary_search(len1: int, search_in: list, len2: int, the_search: list):
 
 
 if __name__ == "__main__":
-    n1, array1, n2, array2 = f_read_2()
-    if check(n1, array1) and check(n2, array2):
-        f_write(binary_search(n1, array1, n2, array2))
-    else:
-        f_write('---Incorrect data---')
+    work(binary_search)

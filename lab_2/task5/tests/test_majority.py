@@ -7,3 +7,7 @@ class Majority(unittest.TestCase):
         self.assertEqual(majority(6, [1, 3, 6, 1, 8, 1]), 0)
         self.assertEqual(majority(6, [1, 3, 1, 1, 8, 1]), 1)
 
+
+if __name__ == '__main__':
+    unittest.main()
+

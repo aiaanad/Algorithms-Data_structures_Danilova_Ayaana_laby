@@ -4,21 +4,44 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e1dd7a0-9b0e-4570-9019-e92bca215b78" name="Changes" comment="Добавила вторую лабораторную">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_1/task1/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab_2/task1/src/utils.py" afterDir="false" />
+    <list default="true" id="9e1dd7a0-9b0e-4570-9019-e92bca215b78" name="Changes" comment="Переместила input.txt output.txt в txtf">
+      <change afterPath="$PROJECT_DIR$/lab_2/task1/tests/utils2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_2/task2/tests/min_max_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_2/task3/tests/min_max_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_2/task4/tests/min_max_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_2/task5/tests/min_max_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab_2/task8/tests/min_max_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2/task1/src/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/task1/src/output.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab_2/task1/src/task1.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/task1/src/task1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2/task2/src/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/task2/src/output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/task1/src/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/task1/src/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/task1/tests/memory_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/task1/tests/min_max_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/task1/tests/test_merge_sort.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/task1/tests/test_merge_sort.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/task1/tests/time_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/task1/txtf/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/task1/txtf/output.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab_2/task2/src/task2.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/task2/src/task2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2/task2/tests/memory_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/task2/tests/memory_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/task2/tests/memory_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/task2/tests/test_merge_sort.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/task2/tests/test_merge_sort.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/task2/tests/time_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/task2/txtf/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/task2/txtf/output.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab_2/task3/src/task3.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/task3/src/task3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab_2/task4/src/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/task4/src/output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/task3/tests/memory_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/task3/tests/test_inversion_number.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/task3/tests/test_inversion_number.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/task3/tests/time_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/task3/txtf/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/task3/txtf/output.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab_2/task4/src/task4.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/task4/src/task4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/task4/tests/memory_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/task4/tests/test_binary_search.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/task4/tests/test_binary_search.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/task4/tests/time_test.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lab_2/task5/src/task5.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/task5/src/task5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/task5/tests/memory_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/task5/tests/test_majority.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/task5/tests/test_majority.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/task5/tests/time_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/task5/txtf/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/task5/txtf/output.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab_2/task8/src/task8.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/task8/src/task8.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/task8/tests/memory_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/task8/tests/test_polynomial_mult.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/task8/tests/test_polynomial_mult.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/task8/tests/time_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_2/task8/txtf/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab_2/task8/txtf/output.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,8 +89,10 @@
     "Python tests.Python tests in test_majority.py.executor": "Run",
     "Python tests.Python tests in test_merge_sort.py.executor": "Run",
     "Python tests.Python tests in test_polynomial_mult.py.executor": "Run",
+    "Python tests.Python tests in time_test.py.executor": "Run",
     "Python.inversion_sort.executor": "Run",
     "Python.memory_test.executor": "Run",
+    "Python.min_max_test.executor": "Run",
     "Python.proverka.executor": "Run",
     "Python.task1.executor": "Run",
     "Python.task2.executor": "Run",
@@ -82,26 +107,28 @@
     "Python.time_test_min_max.executor": "Run",
     "Python.unittest.executor": "Run",
     "Python.utils.executor": "Run",
+    "Python.utils2.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Далаана/Desktop/algosy/Algorithms-Data_structures_Danilova_Ayaana_laby/lab_2"
+    "last_opened_file_path": "C:/Users/Далаана/Desktop/algosy/Algorithms-Data_structures_Danilova_Ayaana_laby/lab_2/task8/tests",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Далаана\Desktop\algosy\Algorithms-Data_structures_Danilova_Ayaana_laby\lab_2" />
-      <recent name="C:\Users\Далаана\Desktop\algosy\Algorithms-Data_structures_Danilova_Ayaana_laby\lab_2\task8" />
-      <recent name="C:\Users\Далаана\Desktop\algosy\Algorithms-Data_structures_Danilova_Ayaana_laby\lab_2\task5" />
-      <recent name="C:\Users\Далаана\Desktop\algosy\Algorithms-Data_structures_Danilova_Ayaana_laby\lab_2\task4" />
-      <recent name="C:\Users\Далаана\Desktop\algosy\Algorithms-Data_structures_Danilova_Ayaana_laby\lab_2\task3" />
+      <recent name="C:\Users\Далаана\Desktop\algosy\Algorithms-Data_structures_Danilova_Ayaana_laby\lab_2\task8\tests" />
+      <recent name="C:\Users\Далаана\Desktop\algosy\Algorithms-Data_structures_Danilova_Ayaana_laby\lab_2\task5\tests" />
+      <recent name="C:\Users\Далаана\Desktop\algosy\Algorithms-Data_structures_Danilova_Ayaana_laby\lab_2\task4\tests" />
+      <recent name="C:\Users\Далаана\Desktop\algosy\Algorithms-Data_structures_Danilova_Ayaana_laby\lab_2\task3\tests" />
+      <recent name="C:\Users\Далаана\Desktop\algosy\Algorithms-Data_structures_Danilova_Ayaana_laby\lab_2\task2\tests" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Далаана\Desktop\algosy\Algorithms-Data_structures_Danilova_Ayaana_laby\lab_2\task8" />
-      <recent name="C:\Users\Далаана\Desktop\algosy\Algorithms-Data_structures_Danilova_Ayaana_laby\lab_2\task8\src" />
-      <recent name="C:\Users\Далаана\Desktop\algosy\Algorithms-Data_structures_Danilova_Ayaana_laby\lab_2\task5" />
-      <recent name="C:\Users\Далаана\Desktop\algosy\Algorithms-Data_structures_Danilova_Ayaana_laby\lab_2\task5\src" />
-      <recent name="C:\Users\Далаана\Desktop\algosy\Algorithms-Data_structures_Danilova_Ayaana_laby\lab_2\task4" />
+      <recent name="C:\Users\Далаана\Desktop\algosy\Algorithms-Data_structures_Danilova_Ayaana_laby\lab_2\task1\tests" />
+      <recent name="C:\Users\Далаана\Desktop\algosy\Algorithms-Data_structures_Danilova_Ayaana_laby\lab_2\task8\txtf" />
+      <recent name="C:\Users\Далаана\Desktop\algosy\Algorithms-Data_structures_Danilova_Ayaana_laby\lab_2\task5\txtf" />
+      <recent name="C:\Users\Далаана\Desktop\algosy\Algorithms-Data_structures_Danilova_Ayaana_laby\lab_2\task4\txtf" />
+      <recent name="C:\Users\Далаана\Desktop\algosy\Algorithms-Data_structures_Danilova_Ayaana_laby\lab_2\task3\txtf" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -144,11 +171,40 @@
       <option name="project" value="LOCAL" />
       <updated>1729285146920</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Создала untils.py">
+      <option name="closed" value="true" />
+      <created>1729519225051</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1729519225051</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Переместила input.txt output.txt в txtf">
+      <option name="closed" value="true" />
+      <created>1729525352988</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1729525352988</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Добавила вторую лабораторную" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавила вторую лабораторную" />
+    <MESSAGE value="Создала untils.py" />
+    <MESSAGE value="Переместила input.txt output.txt в txtf" />
+    <option name="LAST_COMMIT_MESSAGE" value="Переместила input.txt output.txt в txtf" />
   </component>
 </project>

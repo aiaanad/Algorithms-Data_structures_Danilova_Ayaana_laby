@@ -11,6 +11,5 @@ class InversionNumberTestCase(unittest.TestCase):
         self.assertEqual(inversion_number(10, [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]), 45)
 
 
-
-#    with pytest.raises(ValueError):
-#        inversion_number(10000, 0)
+if __name__ == '__main__':
+    unittest.main()

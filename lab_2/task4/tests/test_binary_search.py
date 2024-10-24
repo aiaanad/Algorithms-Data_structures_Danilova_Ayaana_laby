@@ -7,3 +7,5 @@ class BinarySearch(unittest.TestCase):
         self.assertEqual(binary_search(6, [1, 1, 3, 4, 5, 6], 3, [1, 2, 5]), [0, -1, 4])
 
 
+if __name__ == '__main__':
+    unittest.main()

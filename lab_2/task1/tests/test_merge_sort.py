@@ -7,3 +7,5 @@ class MergeSort(unittest.TestCase):
         self.assertEqual(mergeSort([6, 2, 4, 1, 1, 7], 0, 5), [1, 1, 2, 4, 6, 7])
 
 
+if __name__ == '__main__':
+    unittest.main()

@@ -1,4 +1,4 @@
-from lab_2.task1.src.utils import f_read, f_write, check
+from lab_2.task1.src.utils import *
 
 
 def merge(arr, left, m, r):
@@ -59,8 +59,4 @@ def inversion_number(lenarr, arr):
 
 
 if __name__ == "__main__":
-    n, array = f_read()
-    if check(n, array):
-        f_write(inversion_number(n, array))
-    else:
-        f_write("---Incorrect data---")
+    work(inversion_number)

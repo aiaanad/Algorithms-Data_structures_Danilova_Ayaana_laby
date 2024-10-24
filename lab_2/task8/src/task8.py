@@ -1,5 +1,5 @@
 from math import *
-from lab_2.task1.src.utils import f_read_3, f_write
+from lab_2.task1.src.utils import *
 
 
 def binary(lenarr, array):
@@ -41,5 +41,4 @@ def polynomial_mult(n, a, b):
 
 
 if __name__ == "__main__":
-    num, array1, array2 = f_read_3()
-    f_write('C = ' + '(' + ','.join(map(str, polynomial_mult(num, array1, array2))) + ')')
+    work(polynomial_mult)
