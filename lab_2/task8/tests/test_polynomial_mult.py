@@ -3,7 +3,7 @@ from lab_2.task8.src.task8 import polynomial_mult
 
 
 class PolynomialMultTestCase(unittest.TestCase):
-    def test_polynomial_mult(self):
+    def test_should_polynomial_mult(self):
         self.assertEqual(polynomial_mult(6, [1, 2, 3, 4, 5, 6], [6, 5, 4, 3, 2, 1]),
                          [6, 17, 32, 50, 70, 91, 70, 50, 32, 17, 6])
         self.assertEqual(polynomial_mult(7, [3, 12, 34, 67, 89, 2, 4], [101, 2, 3, 1, 56, 11, 0]),
