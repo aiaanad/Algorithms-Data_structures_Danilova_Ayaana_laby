@@ -1,4 +1,4 @@
-from lab_2.task1.src.utils import *
+from lab_2.utils import *
 
 
 def merge(arr, left, m, r):

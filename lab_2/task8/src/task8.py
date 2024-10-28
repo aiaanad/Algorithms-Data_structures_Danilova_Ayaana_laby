@@ -1,5 +1,5 @@
 from math import *
-from lab_2.task1.src.utils import *
+from lab_2.utils import *
 
 
 def binary(lenarr, array):

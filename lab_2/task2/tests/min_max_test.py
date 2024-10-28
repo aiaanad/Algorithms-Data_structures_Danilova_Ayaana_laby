@@ -1,4 +1,4 @@
-from lab_2.task1.tests.utils2 import *
+from lab_2.utils_for_tests import *
 from lab_2.task2.src.task2 import mergeSort
 
 min_args = (random.sample(range(100), 10),) + (0,) + (9,)

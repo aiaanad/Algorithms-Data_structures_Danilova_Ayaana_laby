@@ -1,4 +1,4 @@
-from lab_2.task1.tests.utils2 import *
+from lab_2.utils_for_tests import *
 from lab_2.task1.src.task1 import mergeSort
 
 min_args = ([(10e9 - 10e5 + i + 1) for i in range(10**3)],) + (0,) + (10**3-1,)

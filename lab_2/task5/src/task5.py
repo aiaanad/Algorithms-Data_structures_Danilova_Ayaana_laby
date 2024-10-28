@@ -1,4 +1,4 @@
-from lab_2.task1.src.utils import work
+from lab_2.utils import work
 from lab_2.task1.src.task1 import mergeSort
 
 
