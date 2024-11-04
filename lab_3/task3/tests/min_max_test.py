@@ -1,4 +1,4 @@
-from lab_3.utils_for_tests import *
+from lab_3.utils.utils_for_tests import *
 from lab_3.task3.src.task3 import bugaboo
 import random
 

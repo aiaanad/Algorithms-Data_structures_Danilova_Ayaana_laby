@@ -1,4 +1,4 @@
-from lab_2.utils_for_tests import *
+from lab_2.utils.utils_for_tests import *
 from lab_2.task4.src.task4 import *
 
 min_args = (10,) + (random.sample(range(100), 10),) + (10,) + (random.sample(range(100), 10),)

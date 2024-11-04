@@ -1,4 +1,4 @@
-from lab_2.utils_for_tests import *
+from lab_2.utils.utils_for_tests import *
 from lab_2.task2.src.task2 import mergeSort
 import random
 

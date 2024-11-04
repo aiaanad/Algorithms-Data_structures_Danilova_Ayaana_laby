@@ -1,4 +1,4 @@
-from lab_2.utils import *
+from lab_2.utils.utils import *
 
 
 def binary_search(len1: int, search_in: list, len2: int, the_search: list):

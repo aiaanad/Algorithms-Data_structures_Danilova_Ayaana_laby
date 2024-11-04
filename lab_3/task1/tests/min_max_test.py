@@ -1,4 +1,4 @@
-from lab_3.utils_for_tests import *
+from lab_3.utils.utils_for_tests import *
 from lab_3.task1.src.task1 import randomized_quicksort
 import random
 

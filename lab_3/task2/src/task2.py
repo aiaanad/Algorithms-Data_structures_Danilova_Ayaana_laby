@@ -1,4 +1,4 @@
-from lab_3.utils import *
+from lab_3.utils.utils import *
 
 
 def qsort(a: list, left: int, right: int) -> list:

@@ -1,5 +1,6 @@
-from lab_2.utils_for_tests import *
+from lab_2.utils.utils_for_tests import *
 from lab_2.task8.src.task8 import *
+import random
 
 min_args = (10,) + (random.sample(range(100), 10),) + (random.sample(range(100), 10),)
 max_args = (10**3,) + (random.sample(range(10 ** 9), 10 ** 3),) + (random.sample(range(10 ** 9), 10 ** 3),)

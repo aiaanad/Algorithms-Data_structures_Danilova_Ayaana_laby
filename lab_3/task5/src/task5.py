@@ -1,4 +1,4 @@
-from lab_3.utils import *
+from lab_3.utils.utils import *
 from lab_3.task1.src.task1 import partition3
 
 

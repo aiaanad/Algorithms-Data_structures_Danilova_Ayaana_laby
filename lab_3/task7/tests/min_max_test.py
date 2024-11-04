@@ -1,4 +1,4 @@
-from lab_3.utils_for_tests import *
+from lab_3.utils.utils_for_tests import *
 from lab_3.task7.src.task7 import radix_sort
 import random
 
