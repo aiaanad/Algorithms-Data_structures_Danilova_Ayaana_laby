@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e1dd7a0-9b0e-4570-9019-e92bca215b78" name="Changes" comment="README links&#10;added" />
+    <list default="true" id="9e1dd7a0-9b0e-4570-9019-e92bca215b78" name="Changes" comment="README links&#10;added">
+      <change beforePath="$PROJECT_DIR$/lab_3/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/lab_3/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -231,7 +233,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730683594693</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="README links&#10;added">
+      <option name="closed" value="true" />
+      <created>1730683885072</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1730683885072</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

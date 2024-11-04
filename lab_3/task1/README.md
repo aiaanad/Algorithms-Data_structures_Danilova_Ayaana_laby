@@ -33,8 +33,16 @@
 git clone https://github.com/aiaanad/Algorithms-Data_structures_Danilova_Ayaana_laby.git
 
 
-Структура:
+Задача 1 [Перейти](https://github.com/aiaanad/Algorithms-Data_structures_Danilova_Ayaana_laby/blob/a182c273233689941d409e5fae71d7d8d891b2ff/lab_3/task1/src/task1.py)
 
+Задача 2 [Перейти](https://github.com/aiaanad/Algorithms-Data_structures_Danilova_Ayaana_laby/tree/a182c273233689941d409e5fae71d7d8d891b2ff/lab_3/task2/src/task2.py)
 
+Задача 3 [Перейти](https://github.com/aiaanad/Algorithms-Data_structures_Danilova_Ayaana_laby/tree/a182c273233689941d409e5fae71d7d8d891b2ff/lab_3/task3/src/task3.py)
+
+Задача 5 [Перейти](https://github.com/aiaanad/Algorithms-Data_structures_Danilova_Ayaana_laby/tree/a182c273233689941d409e5fae71d7d8d891b2ff/lab_3/task5/src/task5.py)
+
+Задача 7 [Перейти](https://github.com/aiaanad/Algorithms-Data_structures_Danilova_Ayaana_laby/tree/a182c273233689941d409e5fae71d7d8d891b2ff/lab_3/task7/src/task7.py)
+
+Задача 8 [Перейти](https://github.com/aiaanad/Algorithms-Data_structures_Danilova_Ayaana_laby/tree/a182c273233689941d409e5fae71d7d8d891b2ff/lab_3/task8/src/task8.py)
 
 
