@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e1dd7a0-9b0e-4570-9019-e92bca215b78" name="Changes" comment="lab3 added">
-      <change afterPath="$PROJECT_DIR$/lab_3/README.md" afterDir="false" />
+    <list default="true" id="9e1dd7a0-9b0e-4570-9019-e92bca215b78" name="Changes" comment="README&#10;added">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_3/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/lab_3/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_3/task1/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/lab_3/task1/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +44,9 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2nADighxFqzHHzeAK3DfLlM8jeg" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -82,24 +87,24 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Далаана/Desktop/algosy/Algorithms-Data_structures_Danilova_Ayaana_laby/lab_3",
+    "last_opened_file_path": "C:/Users/Далаана/Desktop/algosy/Algorithms-Data_structures_Danilova_Ayaana_laby/lab_3/task8",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Далаана\Desktop\algosy\Algorithms-Data_structures_Danilova_Ayaana_laby\lab_3" />
-      <recent name="C:\Users\Далаана\Desktop\algosy\Algorithms-Data_structures_Danilova_Ayaana_laby\lab_3\task1\src" />
       <recent name="C:\Users\Далаана\Desktop\algosy\Algorithms-Data_structures_Danilova_Ayaana_laby\lab_3\task8" />
       <recent name="C:\Users\Далаана\Desktop\algosy\Algorithms-Data_structures_Danilova_Ayaana_laby\lab_3\task7" />
       <recent name="C:\Users\Далаана\Desktop\algosy\Algorithms-Data_structures_Danilova_Ayaana_laby\lab_3\task5" />
+      <recent name="C:\Users\Далаана\Desktop\algosy\Algorithms-Data_structures_Danilova_Ayaana_laby\lab_3\task3" />
+      <recent name="C:\Users\Далаана\Desktop\algosy\Algorithms-Data_structures_Danilova_Ayaana_laby\lab_3\task2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Далаана\Desktop\algosy\Algorithms-Data_structures_Danilova_Ayaana_laby\lab_3\utils" />
+      <recent name="C:\Users\Далаана\Desktop\algosy\Algorithms-Data_structures_Danilova_Ayaana_laby\lab_2\utils" />
       <recent name="C:\Users\Далаана\Desktop\algosy\Algorithms-Data_structures_Danilova_Ayaana_laby\lab_3\task5\src" />
       <recent name="C:\Users\Далаана\Desktop\algosy\Algorithms-Data_structures_Danilova_Ayaana_laby\lab_3\task5" />
       <recent name="C:\Users\Далаана\Desktop\algosy\Algorithms-Data_structures_Danilova_Ayaana_laby\lab_3\task8\src" />
-      <recent name="C:\Users\Далаана\Desktop\algosy\Algorithms-Data_structures_Danilova_Ayaana_laby\lab_3\task7\src" />
-      <recent name="C:\Users\Далаана\Desktop\algosy\Algorithms-Data_structures_Danilova_Ayaana_laby\lab_2" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -214,7 +219,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730681710675</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="README&#10;added">
+      <option name="closed" value="true" />
+      <created>1730682469401</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1730682469401</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -239,6 +252,7 @@
     <MESSAGE value="lab3" />
     <MESSAGE value="rename tests" />
     <MESSAGE value="lab3 added" />
-    <option name="LAST_COMMIT_MESSAGE" value="lab3 added" />
+    <MESSAGE value="README&#10;added" />
+    <option name="LAST_COMMIT_MESSAGE" value="README&#10;added" />
   </component>
 </project>

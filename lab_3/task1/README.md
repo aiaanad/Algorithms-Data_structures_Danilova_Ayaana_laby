@@ -33,6 +33,8 @@
 git clone https://github.com/aiaanad/Algorithms-Data_structures_Danilova_Ayaana_laby.git
 
 
+Структура:
+
 
 
 
