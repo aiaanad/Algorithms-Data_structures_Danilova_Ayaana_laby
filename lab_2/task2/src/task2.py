@@ -37,8 +37,8 @@ def merge(arr, left, m, right):
         j += 1
         k += 1
 
-    coordinates = str(left + 1) + ' ' + str(right + 1) + ' ' + str(arr[left]) + ' ' + str(arr[right]) + '\n'
-    f_write(coordinates)
+    # coordinates = str(left + 1) + ' ' + str(right + 1) + ' ' + str(arr[left]) + ' ' + str(arr[right]) + '\n'
+    # f_write(coordinates)
 
 
 def mergeSort(arr, left, right):

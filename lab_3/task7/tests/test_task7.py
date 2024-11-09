@@ -1,7 +1,7 @@
 import random
 import time
 import unittest
-from lab_3.task7.src.task7 import radix_sort
+from lab3.task7.src.task7 import radix_sort
 
 
 class TestRadixSort(unittest.TestCase):

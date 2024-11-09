@@ -1,7 +1,7 @@
 import random
 import time
 import unittest
-from lab_3.task3.src.task3 import bugaboo
+from lab3.task3.src.task3 import bugaboo
 
 
 class TestBugaboo(unittest.TestCase):

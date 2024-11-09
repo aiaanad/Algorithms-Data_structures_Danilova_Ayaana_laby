@@ -1,3 +1,7 @@
+import pathlib
+import os
+import sys
+sys.path.append(os.path.join(os.getcwd(), '..'))
 from lab_3.utils.utils import work
 
 
@@ -28,4 +32,4 @@ def radix_sort(n: int, m: int, k: int, a: list) -> list:
 
 
 if __name__ == "__main__":
-    work(radix_sort)
+    work(pathlib.Path(__file__).stem, radix_sort)

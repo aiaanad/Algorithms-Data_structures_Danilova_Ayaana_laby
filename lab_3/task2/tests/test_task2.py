@@ -1,7 +1,7 @@
 import random
 import time
 import unittest
-from lab_3.task2.src.task2 import anti_qsort
+from lab3.task2.src.task2 import anti_qsort
 
 
 class TestAntiQSort(unittest.TestCase):

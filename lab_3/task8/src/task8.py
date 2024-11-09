@@ -1,6 +1,10 @@
 import random
-from math import *
-from lab_3.utils.utils import *
+from math import sqrt
+import pathlib
+import os
+import sys
+sys.path.append(os.path.join(os.getcwd(), '..'))
+from lab_3.utils.utils import work
 
 
 def distance(t: list) -> float:
@@ -44,5 +48,5 @@ def nearest_point(n: int, k: int, a: list) -> list:
 
 
 if __name__ == "__main__":
-    work(nearest_point)
+    work(pathlib.Path(__file__).stem, nearest_point)
 

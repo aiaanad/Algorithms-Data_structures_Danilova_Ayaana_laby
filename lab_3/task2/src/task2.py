@@ -1,3 +1,7 @@
+import pathlib
+import os
+import sys
+sys.path.append(os.path.join(os.getcwd(), '..'))
 from lab_3.utils.utils import work
 
 
@@ -33,4 +37,4 @@ def anti_qsort(n: int) -> list:
 
 
 if __name__ == "__main__":
-    work(anti_qsort)
+    work(pathlib.Path(__file__).stem, anti_qsort)

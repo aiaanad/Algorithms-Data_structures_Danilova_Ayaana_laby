@@ -1,7 +1,7 @@
 import random
 import time
 import unittest
-from lab_3.task5.src.task5 import hirsh_index
+from lab3.task5.src.task5 import hirsh_index
 
 
 class TestHirshIndex(unittest.TestCase):

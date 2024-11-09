@@ -1,3 +1,7 @@
+import pathlib
+import os
+import sys
+sys.path.append(os.path.join(os.getcwd(), '..'))
 from lab_3.utils.utils import work
 
 
@@ -19,4 +23,4 @@ def bugaboo(n: int, k: int, a: list) -> str:
 
 
 if __name__ == "__main__":
-    work(bugaboo)
+    work(pathlib.Path(__file__).stem, bugaboo)

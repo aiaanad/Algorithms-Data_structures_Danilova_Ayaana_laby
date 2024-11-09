@@ -17,9 +17,7 @@
 
 папка tests:
 
-    min_max_test - тесты памяти, времени для макс.мин значений исходных данных
-
-    test_should_<задача> - юниттесты
+    test_task<задача> - юниттесты
 
 папка txtf:
   
@@ -27,14 +25,34 @@
  
     output.txt — выходные данные в соответствующем входным порядке
 
+
+&nbsp;
 <h3>Инструкция по запуску:</h3>
+&nbsp;
 
-Клонирование репозитория
-git clone https://github.com/aiaanad/Algorithms-Data_structures_Danilova_Ayaana_laby.git
+1) Откройте терминал
+
+&nbsp;
+2) Клонируйте мой репозиторий
+       
+       git clone https://github.com/aiaanad/Algorithms-Data_structures_Danilova_Ayaana_laby.git
+
+
+3) Перейдите в директорию 3 лабораторной (потому что у моего репозитория слишком длинное название)
+
+       cd .\Algorithms-Data_structures_Danilova_Ayaana_laby\lab_3\
+
+4) Можете запустить задачи (представлен пример запуска первой задачи, для остальных меняете число на нужный номер задачи)
+
+         python -m task1.src.task1
+
+5) И тесты к ним (представлен пример запуска тестов к первой задаче, для остальных меняете число на нужный номер задачи)
+
+         python -m unittest task1.tests.test_task1
 
 
 
-
+&nbsp;
 <h3>Навигация по лабораторной:</h3>
 
 Задача 1 [Перейти](https://github.com/aiaanad/Algorithms-Data_structures_Danilova_Ayaana_laby/blob/a182c273233689941d409e5fae71d7d8d891b2ff/lab_3/task1/src/task1.py)

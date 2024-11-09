@@ -1,4 +1,8 @@
 import random
+import pathlib
+import os
+import sys
+sys.path.append(os.path.join(os.getcwd(), '..'))
 from lab_3.utils.utils import work
 
 
@@ -43,4 +47,4 @@ def randomized_quicksort(a: list, l: int, r: int) -> list:
 
 
 if __name__ == "__main__":
-    work(randomized_quicksort, 0)
+    work(pathlib.Path(__file__).stem, randomized_quicksort, 0)

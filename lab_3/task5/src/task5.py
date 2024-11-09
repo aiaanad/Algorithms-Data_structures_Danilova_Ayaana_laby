@@ -1,3 +1,7 @@
+import pathlib
+import os
+import sys
+sys.path.append(os.path.join(os.getcwd(), '..'))
 from lab_3.utils.utils import work
 from lab_3.task1.src.task1 import partition3
 
@@ -18,4 +22,4 @@ def hirsh_index(a: list, l: int, r: int) -> int:
 
 
 if __name__ == "__main__":
-    work(hirsh_index, 0)
+    work(pathlib.Path(__file__).stem, hirsh_index, 0)
