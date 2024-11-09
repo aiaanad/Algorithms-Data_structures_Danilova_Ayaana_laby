@@ -1,4 +1,4 @@
-from lab_3.utils.utils import *
+from lab_3.utils.utils import work
 
 
 def is_correct(a: list) -> bool:

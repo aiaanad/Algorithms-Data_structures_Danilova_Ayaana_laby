@@ -1,5 +1,5 @@
 import random
-from lab_3.utils.utils import *
+from lab_3.utils.utils import work
 
 
 def partition(a: list, l: int, r: int) -> list:

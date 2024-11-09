@@ -17,9 +17,7 @@
 
 папка tests:
 
-    min_max_test - тесты памяти, времени для макс.мин значений исходных данных
-
-    test_should_<задача> - юниттесты
+    test_task<задача> - юниттесты
 
 папка txtf:
   
@@ -29,9 +27,12 @@
 
 <h3>Инструкция по запуску:</h3>
 
-Клонирование репозитория
-git clone https://github.com/aiaanad/Algorithms-Data_structures_Danilova_Ayaana_laby.git
+1.Клонирование репозитория
 
+    git clone https://github.com/aiaanad/Algorithms-Data_structures_Danilova_Ayaana_laby.git
+
+
+2.
 
 
 

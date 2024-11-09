@@ -1,4 +1,4 @@
-from lab_3.utils.utils import *
+from lab_3.utils.utils import work
 
 
 def radix_sort(n: int, m: int, k: int, a: list) -> list:
