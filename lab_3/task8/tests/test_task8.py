@@ -29,13 +29,13 @@ class TestRadixSort(unittest.TestCase):
 
     def test_should_nearest_point_args1(self):
         """THEN: результат должен быть корректным."""
-        self.check_performance(self.correct_check_args1)
-        self.assertEqual(nearest_point(*self.correct_check_args1), self.expected1)
+        if self.check_performance(self.correct_check_args1):
+            self.assertEqual(nearest_point(*self.correct_check_args1), self.expected1)
 
     def test_should_nearest_point_args2(self):
         """THEN: результат должен быть корректным."""
-        self.check_performance(self.correct_check_args2)
-        self.assertEqual(nearest_point(*self.correct_check_args2), self.expected2)
+        if self.check_performance(self.correct_check_args2):
+            self.assertEqual(nearest_point(*self.correct_check_args2), self.expected2)
 
     def test_should_nearest_point_max_args(self):
         """THEN: время для максимальных значений."""

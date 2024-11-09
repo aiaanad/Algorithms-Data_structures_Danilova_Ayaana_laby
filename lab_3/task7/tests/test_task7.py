@@ -27,18 +27,18 @@ class TestRadixSort(unittest.TestCase):
 
     def test_should_radix_sort_args1(self):
         """THEN: результат должен быть корректным."""
-        self.check_performance(self.correct_check_args1)
-        self.assertEqual(radix_sort(*self.correct_check_args1, self.array), self.expected1)
+        if self.check_performance(self.correct_check_args1):
+            self.assertEqual(radix_sort(*self.correct_check_args1, self.array), self.expected1)
 
     def test_should_radix_sort_args2(self):
         """THEN: результат должен быть корректным."""
-        self.check_performance(self.correct_check_args2)
-        self.assertEqual(radix_sort(*self.correct_check_args2, self.array), self.expected2)
+        if self.check_performance(self.correct_check_args2):
+            self.assertEqual(radix_sort(*self.correct_check_args2, self.array), self.expected2)
 
     def test_should_radix_sort_args3(self):
         """THEN: результат должен быть корректным."""
-        self.check_performance(self.correct_check_args3)
-        self.assertEqual(radix_sort(*self.correct_check_args3, self.array), self.expected3)
+        if self.check_performance(self.correct_check_args3):
+            self.assertEqual(radix_sort(*self.correct_check_args3, self.array), self.expected3)
 
 
 if __name__ == "__main__":

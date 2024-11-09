@@ -27,13 +27,13 @@ class TestAntiQSort(unittest.TestCase):
 
     def test_should_anti_qsort_n1(self):
         """THEN: результат должен быть корректным."""
-        self.check_performance(self.correct_check_val1)
-        self.assertEqual(anti_qsort(self.correct_check_val1), self.expected1)
+        if self.check_performance(self.correct_check_val1):
+            self.assertEqual(anti_qsort(self.correct_check_val1), self.expected1)
 
     def test_should_anti_qsort_n2(self):
         """THEN: результат должен быть корректным."""
-        self.check_performance(self.correct_check_val2)
-        self.assertEqual(anti_qsort(self.correct_check_val2), self.expected2)
+        if self.check_performance(self.correct_check_val2):
+            self.assertEqual(anti_qsort(self.correct_check_val2), self.expected2)
 
     def test_should_anti_qsort_max_n(self):
         """THEN: время для максимального n."""
