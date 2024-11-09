@@ -1,4 +1,8 @@
-from lab_2.utils.utils import *
+import pathlib
+import os
+import sys
+sys.path.append(os.path.join(os.getcwd(), '..'))
+from lab_2.utils.utils import work
 
 
 def merge(arr, left, m, r):
@@ -59,4 +63,4 @@ def inversion_number(lenarr, arr):
 
 
 if __name__ == "__main__":
-    work(inversion_number)
+    work(pathlib.Path(__file__).stem, inversion_number)

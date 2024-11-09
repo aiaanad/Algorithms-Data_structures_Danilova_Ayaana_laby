@@ -1,5 +1,9 @@
-from math import *
-from lab_2.utils.utils import *
+from math import ceil, log
+from pathlib import Path
+import os
+import sys
+sys.path.append(os.path.join(os.getcwd(), '..'))
+from lab_2.utils.utils import work
 
 
 def binary(lenarr, array):
@@ -41,4 +45,4 @@ def polynomial_mult(n, a, b):
 
 
 if __name__ == "__main__":
-    work(polynomial_mult)
+    work(Path(__file__).stem, polynomial_mult)

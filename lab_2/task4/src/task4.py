@@ -1,4 +1,8 @@
-from lab_2.utils.utils import *
+from pathlib import Path
+import os
+import sys
+sys.path.append(os.path.join(os.getcwd(), '..'))
+from lab_2.utils.utils import work
 
 
 def binary_search(len1: int, search_in: list, len2: int, the_search: list):
@@ -24,4 +28,4 @@ def binary_search(len1: int, search_in: list, len2: int, the_search: list):
 
 
 if __name__ == "__main__":
-    work(binary_search)
+    work(Path(__file__).stem, binary_search)
