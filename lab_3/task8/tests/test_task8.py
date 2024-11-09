@@ -10,7 +10,7 @@ from lab_3.task8.src.task8 import nearest_point
 class TestRadixSort(unittest.TestCase):
 
     def setUp(self):
-        """Подготовка тестовых данных."""
+        """GIVEN: Подготовка тестовых данных."""
         self.correct_check_args1 = 2, 1, [[1, 3], [-2, 2]]
         self.expected1 = [[-2, 2]]
         self.correct_check_args2 = 3, 2, [[3, 3], [5, -1], [-2, 4]]

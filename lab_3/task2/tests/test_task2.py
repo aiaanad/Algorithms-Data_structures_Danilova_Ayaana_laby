@@ -9,7 +9,7 @@ from lab_3.task2.src.task2 import anti_qsort
 class TestAntiQSort(unittest.TestCase):
 
     def setUp(self):
-        """Подготовка тестовых данных."""
+        """GIVEN: Подготовка тестовых данных."""
         self.correct_check_val1, self.expected1 = 3, [1, 3, 2]
         self.correct_check_val2, self.expected2 = 6, [1, 4, 6, 3, 2, 5]
 

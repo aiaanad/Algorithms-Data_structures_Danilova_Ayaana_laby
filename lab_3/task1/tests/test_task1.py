@@ -10,7 +10,7 @@ from lab_3.task1.src.task1 import randomized_quicksort
 class TestRandomizedQuicksort(unittest.TestCase):
 
     def setUp(self):
-        """Подготовка тестовых данных."""
+        """GIVEN: Подготовка тестовых данных."""
         self.small_arr = random.sample(range(10 ** 5), 10 ** 2)
         self.large_arr = random.sample(range(10 ** 9), 10 ** 5)
 

@@ -10,7 +10,7 @@ from lab_3.task3.src.task3 import bugaboo
 class TestBugaboo(unittest.TestCase):
 
     def setUp(self):
-        """Подготовка тестовых данных."""
+        """GIVEN: Подготовка тестовых данных."""
         self.correct_check_args1 = 3, 2, [2, 1, 3]
         self.expected1 = "НЕТ"
         self.correct_check_args2 = 5, 3, [1, 5, 3, 4, 1]

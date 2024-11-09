@@ -1,13 +1,13 @@
 import random
 import time
 import unittest
-from lab3.task5.src.task5 import hirsh_index
+from lab_3.task5.src.task5 import hirsh_index
 
 
 class TestHirshIndex(unittest.TestCase):
 
     def setUp(self):
-        """Подготовка тестовых данных."""
+        """GIVEN: Подготовка тестовых данных."""
         self.correct_check_args1 = [3, 0, 1, 6, 6], 0, 4
         self.expected1 = 3
         self.correct_check_args2 = [1, 3, 1], 0, 2

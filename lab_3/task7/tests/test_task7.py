@@ -1,13 +1,12 @@
-import random
 import time
 import unittest
-from lab3.task7.src.task7 import radix_sort
+from lab_3.task7.src.task7 import radix_sort
 
 
 class TestRadixSort(unittest.TestCase):
 
     def setUp(self):
-        """Подготовка тестовых данных."""
+        """GIVEN: Подготовка тестовых данных."""
         self.array = [['b', 'b', 'b'], ['a', 'b', 'a'], ['b', 'a', 'a']]
         self.correct_check_args1 = (3, 3, 1)
         self.expected1 = [2, 3, 1]
