@@ -32,11 +32,9 @@
 
 1) Откройте терминал
 
-
 2) Клонируйте мой репозиторий
        
         git clone https://github.com/aiaanad/Algorithms-Data_structures_Danilova_Ayaana_laby.git
-
 
 3) Перейдите в директорию 3 лабораторной (потому что у моего репозитория слишком длинное название)
 
