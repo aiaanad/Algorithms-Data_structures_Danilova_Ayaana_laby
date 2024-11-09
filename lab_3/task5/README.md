@@ -32,7 +32,7 @@
 
 1) Откройте терминал
 
-&nbsp;
+
 2) Клонируйте мой репозиторий
        
        git clone https://github.com/aiaanad/Algorithms-Data_structures_Danilova_Ayaana_laby.git
