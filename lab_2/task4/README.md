@@ -41,7 +41,7 @@
          cd Algorithms-Data_structures_Danilova_Ayaana_laby/
 4) Запуск решений
 
-         python lab_3/task1/src/task1.py
+         python -m lab_3.task1.src.task1.py
 5) Запуск тестов
             
          cd lab_3/task1/test

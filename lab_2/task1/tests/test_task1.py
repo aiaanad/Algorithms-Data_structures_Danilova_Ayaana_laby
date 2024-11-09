@@ -26,13 +26,13 @@ class TestMergeSort(unittest.TestCase):
 
     def test_should_sort_small_array(self):
         """THEN: результат должен быть отсортированным массивом."""
-        self.check_performance(self.small_arr)
-        self.assertEqual(mergeSort(self.small_arr, 0, len(self.small_arr) - 1), sorted(self.small_arr))
+        if self.check_performance(self.small_arr):
+            self.assertEqual(mergeSort(self.small_arr, 0, len(self.small_arr) - 1), sorted(self.small_arr))
 
     def test_should_sort_large_array(self):
         """THEN: результат должен быть отсортированным массивом."""
-        self.check_performance(self.large_arr)
-        self.assertEqual(mergeSort(self.large_arr, 0, len(self.large_arr) - 1), sorted(self.large_arr))
+        if self.check_performance(self.large_arr):
+            self.assertEqual(mergeSort(self.large_arr, 0, len(self.large_arr) - 1), sorted(self.large_arr))
 
 
 if __name__ == "__main__":

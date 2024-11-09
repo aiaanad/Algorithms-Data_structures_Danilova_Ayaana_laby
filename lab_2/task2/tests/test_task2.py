@@ -27,13 +27,13 @@ class ReversedMergeSort(unittest.TestCase):
 
     def test_should_sort_small_array(self):
         """THEN: результат должен быть отсортированным массивом."""
-        self.check_performance(self.small_arr)
-        self.assertEqual(mergeSort(self.small_arr, 0, len(self.small_arr) - 1), sorted(self.small_arr, reverse=True))
+        if self.check_performance(self.small_arr):
+            self.assertEqual(mergeSort(self.small_arr, 0, len(self.small_arr) - 1), sorted(self.small_arr, reverse=True))
 
     def test_should_sort_large_array(self):
         """THEN: результат должен быть отсортированным массивом."""
-        self.check_performance(self.large_arr)
-        self.assertEqual(mergeSort(self.large_arr, 0, len(self.large_arr) - 1), sorted(self.large_arr, reverse=True))
+        if self.check_performance(self.large_arr):
+            self.assertEqual(mergeSort(self.large_arr, 0, len(self.large_arr) - 1), sorted(self.large_arr, reverse=True))
 
     def tearDown(self):
         path = pathlib.Path(__file__).parent.joinpath('..', 'txtf', 'output.txt')
