@@ -1,7 +1,10 @@
 import random
 import time
 import unittest
-from lab3.task3.src.task3 import bugaboo
+import os
+import sys
+sys.path.append(os.path.join(os.getcwd(), '..'))
+from lab_3.task3.src.task3 import bugaboo
 
 
 class TestBugaboo(unittest.TestCase):

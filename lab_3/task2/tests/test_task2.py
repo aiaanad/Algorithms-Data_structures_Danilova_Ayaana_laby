@@ -1,7 +1,9 @@
-import random
 import time
 import unittest
-from lab3.task2.src.task2 import anti_qsort
+import os
+import sys
+sys.path.append(os.path.join(os.getcwd(), '..'))
+from lab_3.task2.src.task2 import anti_qsort
 
 
 class TestAntiQSort(unittest.TestCase):

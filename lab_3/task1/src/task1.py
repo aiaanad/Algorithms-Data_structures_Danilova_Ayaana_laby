@@ -1,12 +1,12 @@
 import random
-import pathlib
+from pathlib import Path
 import os
 import sys
 sys.path.append(os.path.join(os.getcwd(), '..'))
 from lab_3.utils.utils import work
 
 
-def partition(a: list, l: int, r: int) -> list:
+def partition(a: list, l: int, r: int) -> int:
     x = a[l]
     j = l
     for i in range(l + 1, r + 1):
@@ -47,4 +47,4 @@ def randomized_quicksort(a: list, l: int, r: int) -> list:
 
 
 if __name__ == "__main__":
-    work(pathlib.Path(__file__).stem, randomized_quicksort, 0)
+    work(Path(__file__).stem, randomized_quicksort, 0)

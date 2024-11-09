@@ -1,4 +1,8 @@
-from lab_2.utils.utils import *
+from pathlib import Path
+import os
+import sys
+sys.path.append(os.path.join(os.getcwd(), '..'))
+from lab_2.utils.utils import work
 
 
 def merge(arr, l, m, r):
@@ -51,4 +55,4 @@ def mergeSort(arr, l, r):
 
 
 if __name__ == "__main__":
-    work(mergeSort, 0)
+    work(Path(__file__).stem, mergeSort, 0)
