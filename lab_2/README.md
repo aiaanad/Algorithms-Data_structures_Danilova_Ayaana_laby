@@ -25,25 +25,26 @@
  
     output.txt — выходные данные в соответствующем входным порядке
 
+&nbsp;
 <h3>Инструкция по запуску:</h3>
+&nbsp;
 
-1) Клонирование репозитория
-           
+1) Откройте терминал
+
+
+2) Клонируйте мой репозиторий
+       
        git clone https://github.com/aiaanad/Algorithms-Data_structures_Danilova_Ayaana_laby.git
 
 
-2) Дать знать IDE, что главная директория(Algorithms-Data_structures_Danilova_Ayaana_laby) должна присутствовать в PYTHONPATH (опционально)
- 
-       кликнуть правой кнопкой мыши по папке в дереве проекта -> выбрать Mark directory as -> Source Root.
+3) Перейдите в директорию 3 лабораторной (потому что у моего репозитория слишком длинное название)
 
-3) Переход в текущую папку(если запускаете не из терминала пайчарм)
+       cd .\Algorithms-Data_structures_Danilova_Ayaana_laby\lab_3\
 
-         cd Algorithms-Data_structures_Danilova_Ayaana_laby/
-4) Запуск решений
+4) Можете запустить задачи (представлен пример запуска первой задачи, для остальных меняете число на нужный номер задачи)
 
-         python -m lab_3.task1.src.task1.py
-5) Запуск тестов
-            
-         cd lab_3/task1/test
-         python -m unittest discover
+         python -m task1.src.task1
 
+5) И тесты к ним (представлен пример запуска тестов к первой задаче, для остальных меняете число на нужный номер задачи)
+
+         python -m unittest task1.tests.test_task1
