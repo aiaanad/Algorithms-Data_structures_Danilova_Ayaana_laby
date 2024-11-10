@@ -3,10 +3,10 @@
 &nbsp;
 <h3>Навигация по репозиторию:</h3>
 
- [1.Лабораторная работа №0](https://github.com/aiaanad/Algorithms-Data_structures_Danilova_Ayaana_laby/tree/0936f33042b0ee36c6d1af4940931a9eb5df1734/lab_0)
+ [1.Лабораторная работа №0](https://github.com/aiaanad/Algorithms-Data_structures_Danilova_Ayaana_laby/tree/536c5c5870247235e98f3d5241ff1cd56da3e2ad/lab_0)
 
- [2.Лабораторная работа №1](https://github.com/aiaanad/Algorithms-Data_structures_Danilova_Ayaana_laby/tree/0936f33042b0ee36c6d1af4940931a9eb5df1734/lab_1)
+ [2.Лабораторная работа №1](https://github.com/aiaanad/Algorithms-Data_structures_Danilova_Ayaana_laby/tree/536c5c5870247235e98f3d5241ff1cd56da3e2ad/lab_1)
 
- [3.Лабораторная работа №2](https://github.com/aiaanad/Algorithms-Data_structures_Danilova_Ayaana_laby/tree/0936f33042b0ee36c6d1af4940931a9eb5df1734/lab_2)
+ [3.Лабораторная работа №2](https://github.com/aiaanad/Algorithms-Data_structures_Danilova_Ayaana_laby/tree/536c5c5870247235e98f3d5241ff1cd56da3e2ad/lab_2)
 
- [4.Лабораторная работа №3](https://github.com/aiaanad/Algorithms-Data_structures_Danilova_Ayaana_laby/tree/0936f33042b0ee36c6d1af4940931a9eb5df1734/lab_3)
+ [4.Лабораторная работа №3](https://github.com/aiaanad/Algorithms-Data_structures_Danilova_Ayaana_laby/tree/536c5c5870247235e98f3d5241ff1cd56da3e2ad/lab_3)
