@@ -4,36 +4,30 @@ import unittest
 import os
 import sys
 sys.path.append(os.path.join(os.getcwd(), '..'))
-from lab_2.task4.src.task4 import binary_search
+from lab_1.task10.src.task10 import palindrom
 
 
-class TestBinarySearch(unittest.TestCase):
+class TestPalindrom(unittest.TestCase):
 
     def setUp(self):
         """GIVEN: Подготовка тестовых данных."""
-        self.correct_check_args1 = 5, [1, 5, 8, 12, 13], 5, [8, 1, 23, 1, 11]
-        self.expected1 = [2, 0, -1, 0, -1]
-
-        self.max_args = 10 ** 5, random.sample(range(10 ** 9), 10 ** 5), 10 ** 5, random.sample(range(10 ** 9), 10 ** 5)
+        self.correct_check_args = 6, ['Q', 'A', 'Z', 'Q', 'A', 'Z']
+        self.expected = ['A', 'Q', 'Z', 'Z', 'Q', 'A']
 
     def check_performance(self, args):
         """WHEN: Проверка производительности: время выполнения."""
         time_start = time.perf_counter()
-        binary_search(*args)
+        palindrom(*args)
         execution_time = time.perf_counter() - time_start
 
         if execution_time > 2:
             self.fail(f"Время выполнения превышает 2 секунды: {execution_time} секунд")
         print(f"Время выполнения: {execution_time} секунд")
 
-    def test_should_binary_search_args1(self):
+    def test_should_palindrom(self):
         """THEN: результат должен быть корректным."""
-        if self.check_performance(self.correct_check_args1):
-            self.assertEqual(binary_search(*self.correct_check_args1), self.expected1)
-
-    def test_should_binary_search_max_args(self):
-        """THEN: время для максимального n."""
-        self.check_performance(self.max_args)
+        if self.check_performance(self.correct_check_args):
+            self.assertEqual(palindrom(*self.correct_check_args), self.expected)
 
 
 if __name__ == "__main__":

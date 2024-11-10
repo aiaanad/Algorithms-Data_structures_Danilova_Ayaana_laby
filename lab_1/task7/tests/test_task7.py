@@ -4,34 +4,34 @@ import unittest
 import os
 import sys
 sys.path.append(os.path.join(os.getcwd(), '..'))
-from lab_2.task4.src.task4 import binary_search
+from lab_1.task7.src.task7 import sortland
 
 
-class TestBinarySearch(unittest.TestCase):
+class TestSortLand(unittest.TestCase):
 
     def setUp(self):
         """GIVEN: Подготовка тестовых данных."""
-        self.correct_check_args1 = 5, [1, 5, 8, 12, 13], 5, [8, 1, 23, 1, 11]
-        self.expected1 = [2, 0, -1, 0, -1]
+        self.correct_check_args1 = 5, [10.00, 8.70, 0.01, 5.00, 3.00]
+        self.expected1 = (3, 4, 1)
 
-        self.max_args = 10 ** 5, random.sample(range(10 ** 9), 10 ** 5), 10 ** 5, random.sample(range(10 ** 9), 10 ** 5)
+        self.max_args = 10 ** 4, random.sample(range(10 ** 9), 10 ** 4)
 
     def check_performance(self, args):
         """WHEN: Проверка производительности: время выполнения."""
         time_start = time.perf_counter()
-        binary_search(*args)
+        sortland(*args)
         execution_time = time.perf_counter() - time_start
 
         if execution_time > 2:
             self.fail(f"Время выполнения превышает 2 секунды: {execution_time} секунд")
         print(f"Время выполнения: {execution_time} секунд")
 
-    def test_should_binary_search_args1(self):
+    def test_should_sortland_args1(self):
         """THEN: результат должен быть корректным."""
         if self.check_performance(self.correct_check_args1):
-            self.assertEqual(binary_search(*self.correct_check_args1), self.expected1)
+            self.assertEqual(sortland(*self.correct_check_args1), self.expected1)
 
-    def test_should_binary_search_max_args(self):
+    def test_should_sortland_max_args(self):
         """THEN: время для максимального n."""
         self.check_performance(self.max_args)
 
