@@ -43,12 +43,12 @@
    ```
 3. Запустите программу:
    ```bash
-   for f in task*/src/*.py; do python "$f"; done 
+   python -m task1.src.task1 
    ```
 
 4. Запуск тестов:
    ```bash
-   python -m unittest discover
+   python -m unittest task1.tests.test_task1
    ```
 
 

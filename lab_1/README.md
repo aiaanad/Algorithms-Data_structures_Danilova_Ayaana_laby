@@ -28,21 +28,13 @@
    ```
 3. **Запуск всех задач**
     ```bash
-        for f in {1..3}; do cd lab_"$f" && for l in task*/src/*.py; do python "$l" ; done; cd .. ; done
+        for f in lab_*/task*/src/*.py; do python "$f"; done
 
     ```
-   **Запуск отдельной задачи**
-   ```bash
-        python -m task1.src.task1
-   ```
 
 4. **Запуск всех тестов задач**
     ```bash
         python -m unittest discover
-    ```
-   **Запуск отдельного теста**
-    ```bash
-        python -m unittest task1.tests.test_task1
     ```
    
 ## Тестирование

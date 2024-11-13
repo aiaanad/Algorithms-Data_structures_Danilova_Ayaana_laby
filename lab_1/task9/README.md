@@ -47,12 +47,12 @@
 
 4. Запуск тестов:
    ```bash
-   python -m unittest discover
+   python -m unittest task9.tests.test_task9
    ```
 
 
 ## Тестирование
 Для запуска тестов выполните:
 ```bash
-    python -m unittest discover
+    python -m unittest task9.tests.test_task9
 ```
