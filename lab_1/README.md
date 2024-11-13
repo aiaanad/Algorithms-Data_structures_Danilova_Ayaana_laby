@@ -28,7 +28,7 @@
    ```
 3. **Запуск всех задач**
     ```bash
-        for f in lab_*/task*/src/*.py; do python "$f"; done
+        for f in task*/src/*.py; do python "$f"; done
 
     ```
 
