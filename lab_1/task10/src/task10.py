@@ -1,4 +1,4 @@
-import pathlib
+from pathlib import Path
 import os
 import sys
 sys.path.append(os.path.join(os.getcwd(), '..'))
@@ -31,4 +31,4 @@ def palindrom(n, word):
 
 
 if __name__ == "__main__":
-    work(pathlib.Path(__file__).stem, palindrom)
+    work(Path(__file__).parts[-4], Path(__file__).stem, palindrom)

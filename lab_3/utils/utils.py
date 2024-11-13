@@ -40,3 +40,9 @@ def work(current_task, func, *dop):
         args = tuple(input_data)
     result = func(*args)
     f_write(current_task, result)
+    print(
+        f'''TASK NUMBER: {current_task[4:]}
+            INPUT DATA: {args}
+            OUTPUT DATA: {result}
+
+    ''')

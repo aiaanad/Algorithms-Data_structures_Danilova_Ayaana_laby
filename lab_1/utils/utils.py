@@ -32,7 +32,7 @@ def f_write(current_task, answer):
     f.close()
 
 
-def work(current_task, func, dop=None):
+def work(current_lab, current_task, func, dop=None):
     input_data = f_read(current_task)
     args = None
     if dop is not None:
@@ -46,6 +46,14 @@ def work(current_task, func, dop=None):
         args = tuple(input_data)
     result = func(*args)
     f_write(current_task, result)
+    print(
+        f'''LAB NUMBER: {current_lab[4:]}
+        TASK NUMBER: {current_task[4:]}
+                INPUT DATA: {args}
+                OUTPUT DATA: {result}
+                
+        ''')
+
 
 
 

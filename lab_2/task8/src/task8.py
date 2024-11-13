@@ -45,4 +45,4 @@ def polynomial_mult(n, a, b):
 
 
 if __name__ == "__main__":
-    work(Path(__file__).stem, polynomial_mult)
+    work(Path(__file__).parts[-4], Path(__file__).stem, polynomial_mult)

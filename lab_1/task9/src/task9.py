@@ -1,4 +1,4 @@
-import pathlib
+from pathlib import Path
 import os
 import sys
 
@@ -22,4 +22,4 @@ def binary_addition(a, b):
 
 
 if __name__ == "__main__":
-    work(pathlib.Path(__file__).stem, binary_addition, 1)
+    work(Path(__file__).parts[-4], Path(__file__).stem, binary_addition, 1)

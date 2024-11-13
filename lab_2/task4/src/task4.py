@@ -25,4 +25,4 @@ def binary_search(len1: int, search_in: list, len2: int, the_search: list):
 
 
 if __name__ == "__main__":
-    work(Path(__file__).stem, binary_search)
+    work(Path(__file__).parts[-4], Path(__file__).stem, binary_search)

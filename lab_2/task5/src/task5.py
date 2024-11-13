@@ -18,4 +18,4 @@ def majority(n, array):
 
 
 if __name__ == "__main__":
-    work(Path(__file__).stem, majority)
+    work(Path(__file__).parts[-4], Path(__file__).stem, majority)

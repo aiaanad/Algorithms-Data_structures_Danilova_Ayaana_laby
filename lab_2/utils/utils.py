@@ -1,6 +1,7 @@
 import pathlib
 import os
 import sys
+
 sys.path.append(os.path.join(os.getcwd(), '..'))
 
 
@@ -25,7 +26,7 @@ def f_write(current_task, answer):
     f.close()
 
 
-def work(current_task, func, *dop):
+def work(current_lab, current_task, func, *dop):
     input_data = f_read(current_task)
     if len(dop) != 0:
         args = (input_data[1],) + (0,) + (len(input_data[1]) - 1,)
@@ -33,3 +34,10 @@ def work(current_task, func, *dop):
         args = tuple(input_data)
     result = func(*args)
     f_write(current_task, result)
+    print(
+        f'''LABA_NUMBER: {current_lab[4:]}
+        TASK NUMBER: {current_task[4:]}
+                INPUT DATA: {args}
+                OUTPUT DATA: {result}
+
+        ''')

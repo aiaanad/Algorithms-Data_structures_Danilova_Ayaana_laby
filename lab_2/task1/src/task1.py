@@ -54,5 +54,6 @@ def mergeSort(arr, l, r):
     return arr
 
 
-if __name__ == "__main__":
-    work(Path(__file__).stem, mergeSort, 0)
+work(Path(__file__).parts[-4], Path(__file__).stem, mergeSort, 0)
+
+

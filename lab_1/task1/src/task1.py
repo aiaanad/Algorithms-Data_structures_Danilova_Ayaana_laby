@@ -1,4 +1,4 @@
-import pathlib
+from pathlib import Path
 import os
 import sys
 sys.path.append(os.path.join(os.getcwd(), '..'))
@@ -19,4 +19,4 @@ def insertion_sort(n, arr):
 
 
 if __name__ == "__main__":
-    work(pathlib.Path(__file__).stem, insertion_sort)
+    work(Path(__file__).parts[-4], Path(__file__).stem, insertion_sort)
