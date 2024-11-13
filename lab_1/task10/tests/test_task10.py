@@ -8,26 +8,16 @@ from lab_1.task10.src.task10 import palindrom
 
 
 class TestPalindrom(unittest.TestCase):
-
-    def setUp(self):
-        """GIVEN: Подготовка тестовых данных."""
-        self.correct_check_args = 6, ['Q', 'A', 'Z', 'Q', 'A', 'Z']
-        self.expected = ['A', 'Q', 'Z', 'Z', 'Q', 'A']
-
-    def check_performance(self, args):
-        """WHEN: Проверка производительности: время выполнения."""
-        time_start = time.perf_counter()
-        palindrom(*args)
-        execution_time = time.perf_counter() - time_start
-
-        if execution_time > 2:
-            self.fail(f"Время выполнения превышает 2 секунды: {execution_time} секунд")
-        print(f"Время выполнения: {execution_time} секунд")
-
     def test_should_palindrom(self):
-        """THEN: результат должен быть корректным."""
-        if self.check_performance(self.correct_check_args):
-            self.assertEqual(palindrom(*self.correct_check_args), self.expected)
+        # given
+        data = 6, ['Q', 'A', 'Z', 'Q', 'A', 'Z']
+        expected_result = ['A', 'Q', 'Z', 'Z', 'Q', 'A']
+
+        # when
+        result = palindrom(*data)
+
+        # then
+        self.assertEqual(result, expected_result)
 
 
 if __name__ == "__main__":

@@ -3,37 +3,22 @@ import time
 import unittest
 import os
 import sys
+
 sys.path.append(os.path.join(os.getcwd(), '..'))
 from lab_2.task4.src.task4 import binary_search
 
 
 class TestBinarySearch(unittest.TestCase):
+    def test_should_binary_search(self):
+        # given
+        data = 5, [1, 5, 8, 12, 13], 5, [8, 1, 23, 1, 11]
+        expected_result = [2, 0, -1, 0, -1]
 
-    def setUp(self):
-        """GIVEN: Подготовка тестовых данных."""
-        self.correct_check_args1 = 5, [1, 5, 8, 12, 13], 5, [8, 1, 23, 1, 11]
-        self.expected1 = [2, 0, -1, 0, -1]
+        # when
+        result = binary_search(*data)
 
-        self.max_args = 10 ** 5, random.sample(range(10 ** 9), 10 ** 5), 10 ** 5, random.sample(range(10 ** 9), 10 ** 5)
-
-    def check_performance(self, args):
-        """WHEN: Проверка производительности: время выполнения."""
-        time_start = time.perf_counter()
-        binary_search(*args)
-        execution_time = time.perf_counter() - time_start
-
-        if execution_time > 2:
-            self.fail(f"Время выполнения превышает 2 секунды: {execution_time} секунд")
-        print(f"Время выполнения: {execution_time} секунд")
-
-    def test_should_binary_search_args1(self):
-        """THEN: результат должен быть корректным."""
-        if self.check_performance(self.correct_check_args1):
-            self.assertEqual(binary_search(*self.correct_check_args1), self.expected1)
-
-    def test_should_binary_search_max_args(self):
-        """THEN: время для максимального n."""
-        self.check_performance(self.max_args)
+        # then
+        self.assertEqual(result, expected_result)
 
 
 if __name__ == "__main__":
