@@ -26,11 +26,11 @@
    ```bash
    cd asd/lab1
    ```
-3. **Запуску всех задач**
+3. **Запуск всех задач**
     ```bash
         for f in task*/src/*.py; do python "$f"; done
 
-4. **Запуску всех тестов задач**
+4. **Запуск всех тестов задач**
     ```bash
         python -m unittest discover -v
 
