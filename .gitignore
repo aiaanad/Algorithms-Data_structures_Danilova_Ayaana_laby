@@ -1,4 +1,6 @@
 .idea/
 lab_*/__init__.py
 lab_*/task*/__init__.py
+lab_*/task*/src/__init__.py
 lab_*/task*/tests/__init__.py
+lab_*/utils/__init__.py
