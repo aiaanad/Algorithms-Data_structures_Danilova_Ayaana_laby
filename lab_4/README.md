@@ -28,14 +28,14 @@
    ```
 3. **Запуск всех задач**
     ```bash
-        for f in lab_3/task*/src/task*; do f=${f%.py}; python -m ${f////.}; done
+        for f in lab_4/task*/src/task*; do f=${f%.py}; python -m ${f////.}; done
 
 4. **Запуск всех тестов задач**
     ```bash
-        for f in lab_3/task*/tests/test_task*; do f=${f%.py}; python -m unittest ${f////.}; done
+        for f in lab_4/task*/tests/test_task*; do f=${f%.py}; python -m unittest ${f////.}; done
 
 ## Тестирование
 Для запуска тестов выполните:
 ```bash
-  for f in lab_3/task*/tests/test_task*; do f=${f%.py}; python -m unittest ${f////.}; done
+      for f in lab_4/task*/tests/test_task*; do f=${f%.py}; python -m unittest ${f////.}; done
 ```

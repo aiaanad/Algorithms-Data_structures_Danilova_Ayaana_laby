@@ -42,21 +42,21 @@
    ```
 2. Перейдите в папку с проектом:
    ```bash
-   cd asd/lab_3
+   cd folder/where/cloned/asd
    ```
 3. Запустите программу:
    ```bash
-   python -m task7.src.task7
+   python -m lab_3.task7.src.task7
    ```
 
 4. Запуск тестов:
    ```bash
-   python -m unittest task7.tests.test_task7
+   python -m unittest lab_3.7.tests.test_task7
    ```
 
 
 ## Тестирование
 Для запуска тестов выполните:
 ```bash
-    python -m unittest discover
+    python -m unittest lab_3.task7.tests.test_task7
 ```

@@ -42,21 +42,21 @@
    ```
 2. Перейдите в папку с проектом:
    ```bash
-   cd asd/lab_1
+   cd folder/where/cloned/asd
    ```
 3. Запустите программу:
    ```bash
-   for f in task*/src/*.py; do python "$f"; done 
+   python -m lab_1.task10.src.task10
    ```
 
 4. Запуск тестов:
    ```bash
-   python -m unittest task10.tests.test_task10
+   python -m unittest lab_1.task10.tests.test_task10
    ```
 
 
 ## Тестирование
 Для запуска тестов выполните:
 ```bash
-    python -m unittest task10.tests.test_task10
+    python -m unittest lab_1.task10.tests.test_task10
 ```

@@ -24,21 +24,18 @@
    ```
 2. Перейдите в папку с проектом:
    ```bash
-   cd asd/lab_1
+   cd folder/where/cloned/asd
    ```
 3. **Запуск всех задач**
     ```bash
-        for f in task*/src/*.py; do python "$f"; done
-
-    ```
+        for f in lab_1/task*/src/task*; do f=${f%.py}; python -m ${f////.}; done
 
 4. **Запуск всех тестов задач**
     ```bash
-        python -m unittest discover -v
-    ```
-   
+        for f in lab_1/task*/tests/test_task*; do f=${f%.py}; python -m unittest ${f////.}; done
+
 ## Тестирование
 Для запуска тестов выполните:
 ```bash
-    python -m unittest discover -v
+      for f in lab_1/task*/tests/test_task*; do f=${f%.py}; python -m unittest ${f////.}; done
 ```

@@ -1,8 +1,5 @@
 from math import ceil, log
 from pathlib import Path
-import os
-import sys
-sys.path.append(os.path.join(os.getcwd(), '..'))
 from lab_2.utils.utils import work
 
 

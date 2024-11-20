@@ -1,8 +1,6 @@
-from ...utils.utils import work
 from collections import deque
 from pathlib import Path
-from pprint import pprint
-import sys
+from lab_4.utils.utils import work
 
 
 def realize_queue(m: int, *operations) -> list:
@@ -17,5 +15,4 @@ def realize_queue(m: int, *operations) -> list:
 
 
 if __name__ == "__main__":
-    pprint(sys.path)
-    work(Path(__file__).stem, realize_queue)
+    work(Path(__file__).parts[-4], Path(__file__).stem, realize_queue)

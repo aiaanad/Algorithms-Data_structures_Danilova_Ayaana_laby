@@ -43,21 +43,20 @@ n(n − 1)/2).
    ```
 2. Перейдите в папку с проектом:
    ```bash
-   cd asd/lab_2
+   cd folder/where/cloned/asd
    ```
 3. Запустите программу:
    ```bash
-   python -m task3.src.task3 
+   python -m lab_2.task3.src.task3
    ```
 
 4. Запуск тестов:
    ```bash
-   python -m unittest task3.tests.test_task3
+   python -m unittest lab_2.task3.tests.test_task3
    ```
 
 
 ## Тестирование
 Для запуска тестов выполните:
 ```bash
-    python -m unittest discover
-```
+    python -m unittest lab_2.task3.tests.test_task3```

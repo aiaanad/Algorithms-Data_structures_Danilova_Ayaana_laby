@@ -42,21 +42,21 @@ n - общее количество точек на плоскости и чер
    ```
 2. Перейдите в папку с проектом:
    ```bash
-   cd asd/lab_3
+   cd folder/where/cloned/asd
    ```
 3. Запустите программу:
    ```bash
-   python -m task8.src.task8
+   python -m lab_3.task8.src.task8
    ```
 
 4. Запуск тестов:
    ```bash
-   python -m unittest task8.tests.test_task8
+   python -m unittest lab_3.task8.tests.test_task8
    ```
 
 
 ## Тестирование
 Для запуска тестов выполните:
 ```bash
-    python -m unittest discover
+    python -m unittest lab_3.task8.tests.test_task8
 ```

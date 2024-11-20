@@ -1,7 +1,4 @@
 import pathlib
-import os
-import sys
-sys.path.append(os.path.join(os.getcwd(), '..'))
 from lab_3.utils.utils import work
 from lab_3.task1.src.task1 import partition3
 

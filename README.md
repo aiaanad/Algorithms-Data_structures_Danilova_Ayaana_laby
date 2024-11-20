@@ -44,7 +44,7 @@
 3. **Запуску всех лабораторных**
     ```bash
    for f in {1..3}; do cd lab_"$f" && for l in task*/src/*.py; do python "$l" ; done; cd .. ; done
-
+   for f in {4..4}; do cd lab_"$f" && for l in task*/src/task*; do l=${l%.py}; python -m ${l////.}; done; done
 
 
 4. **Запуску всех тестов**

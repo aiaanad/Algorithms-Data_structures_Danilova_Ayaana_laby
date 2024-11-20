@@ -41,21 +41,21 @@ b0, ...bk−1, 1 ≤ bj ≤ 10^9 для всех 0 ≤ j < k.
    ```
 2. Перейдите в папку с проектом:
    ```bash
-   cd asd/lab_2
+   cd folder/where/cloned/asd
    ```
 3. Запустите программу:
    ```bash
-   python -m task4.src.task4 
+   python -m lab_2.task4.src.task4
    ```
 
 4. Запуск тестов:
    ```bash
-   python -m unittest task4.tests.test_task4
+   python -m unittest lab_2.task4.tests.test_task4
    ```
 
 
 ## Тестирование
 Для запуска тестов выполните:
 ```bash
-    python -m unittest discover
+    python -m unittest lab_2.task4.tests.test_task4
 ```
