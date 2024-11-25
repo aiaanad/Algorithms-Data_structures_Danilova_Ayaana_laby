@@ -1,4 +1,4 @@
-import pathlib
+from pathlib import Path
 from lab_3.utils.utils import work
 from lab_3.task1.src.task1 import partition3
 
@@ -19,4 +19,4 @@ def hirsh_index(a: list, l: int, r: int) -> int:
 
 
 if __name__ == "__main__":
-    work(pathlib.Path(__file__).stem, hirsh_index, 0)
+    work(Path(__file__).parts[-4], Path(__file__).stem, hirsh_index, 0)

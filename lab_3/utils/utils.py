@@ -31,7 +31,7 @@ def f_write(current_task, answer):
     f.close()
 
 
-def work(current_task, func, *dop):
+def work(current_lab, current_task, func, *dop):
     input_data = f_read(current_task)
     if len(dop) != 0:
         arr = list(input_data) if type(input_data[1]) is not list else input_data[1]
@@ -41,8 +41,9 @@ def work(current_task, func, *dop):
     result = func(*args)
     f_write(current_task, result)
     print(
-        f'''TASK NUMBER: {current_task[4:]}
-            INPUT DATA: {args}
-            OUTPUT DATA: {result}
+        f'''LABA_NUMBER: {current_lab[4:]}
+            TASK NUMBER: {current_task[4:]}
+                    INPUT DATA: {args}
+                    OUTPUT DATA: {result}
 
-    ''')
+            ''')

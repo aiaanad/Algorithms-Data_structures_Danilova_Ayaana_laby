@@ -1,4 +1,4 @@
-import pathlib
+from pathlib import Path
 from lab_3.utils.utils import work
 
 
@@ -20,4 +20,4 @@ def bugaboo(n: int, k: int, a: list) -> str:
 
 
 if __name__ == "__main__":
-    work(pathlib.Path(__file__).stem, bugaboo)
+    work(Path(__file__).parts[-4], Path(__file__).stem, bugaboo)

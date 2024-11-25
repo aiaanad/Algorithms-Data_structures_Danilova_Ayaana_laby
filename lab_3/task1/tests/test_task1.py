@@ -1,9 +1,6 @@
 import random
 import time
 import unittest
-import os
-import sys
-sys.path.append(os.path.join(os.getcwd(), '..'))
 from lab_3.task1.src.task1 import randomized_quicksort
 
 

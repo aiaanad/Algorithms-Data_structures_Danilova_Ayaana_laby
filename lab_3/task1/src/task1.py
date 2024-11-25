@@ -44,4 +44,4 @@ def randomized_quicksort(a: list, l: int, r: int) -> list:
 
 
 if __name__ == "__main__":
-    work(Path(__file__).stem, randomized_quicksort, 0)
+    work(Path(__file__).parts[-4], Path(__file__).stem, randomized_quicksort, 0)

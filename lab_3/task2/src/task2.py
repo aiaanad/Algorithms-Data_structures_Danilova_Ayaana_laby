@@ -34,4 +34,4 @@ def anti_qsort(n: int) -> list:
 
 
 if __name__ == "__main__":
-    work(Path(__file__).stem, anti_qsort)
+    work(Path(__file__).parts[-4], Path(__file__).stem, anti_qsort)

@@ -4,7 +4,7 @@ import unittest
 from lab_4.task2.src.task2 import realize_queue
 
 
-class TestBugaboo(unittest.TestCase):
+class TestRealizeQueue(unittest.TestCase):
     def test_should_realize_queue_args1(self):
         # given
         data = (4, ['+', 1], ['+', 10], ['-'], ['-'])
@@ -21,15 +21,36 @@ class TestBugaboo(unittest.TestCase):
         self.assertEqual(result, expected_result)
         self.assertLessEqual(result_time, expected_time, f"Значение {result_time} превышает порог {expected_time}")
 
-    def test_should_realize_queue_args2(self):
+    def test_should_realize_queue_max_args_for_append(self):
         # given
-        data = 5, 3, [1, 5, 3, 4, 1]
-        expected_result = "ДА"
         expected_time = 2
+        expected_result = []
+        arr = random.sample(range(10 ** 9), 10 ** 6)
+        args = (10 ** 6,)
+        for elem in arr:
+            args += (['+', elem],)
 
         # when
         start_time = time.perf_counter()
-        result = realize_queue(*data)
+        result = realize_queue(*args)
+        result_time = time.perf_counter() - start_time
+        print("Итоговое время алгоритма:", result_time)
+
+        # then
+        self.assertEqual(result, expected_result)
+        self.assertLessEqual(result_time, expected_time, f"Значение {result_time} превышает порог {expected_time}")
+
+    def test_should_realize_queue_max_args(self):
+        # given
+        expected_time = 2
+        expected_result = random.sample(range(10 ** 9), 10 ** 3)
+        args = (10 ** 6,)
+        for i in range(10 ** 3):
+            args += (['+', expected_result[i]], ['-'])
+
+        # when
+        start_time = time.perf_counter()
+        result = realize_queue(*args)
         result_time = time.perf_counter() - start_time
         print("Итоговое время алгоритма:", result_time)
 

@@ -1,6 +1,6 @@
 import random
 from math import sqrt
-import pathlib
+from pathlib import Path
 from lab_3.utils.utils import work
 
 
@@ -45,5 +45,5 @@ def nearest_point(n: int, k: int, a: list) -> list:
 
 
 if __name__ == "__main__":
-    work(pathlib.Path(__file__).stem, nearest_point)
+    work(Path(__file__).parts[-4], Path(__file__).stem, nearest_point)
 
