@@ -10,6 +10,11 @@ class Queue:
         self.head = None
         self.last = None
 
+    def isEmpty(self):
+        if self.head:
+            return False
+        return True
+
     def enqueue(self, data):
         if self.last is None:
             self.head = Node(data)
@@ -38,16 +43,11 @@ class Queue:
             temp = temp.next
         return count
 
-    def isEmpty(self):
-        if self.head == self.last and self.head is None:
-            return True
-        return False
-
     def __repr__(self):
         queue = ''
         temp = self.head
         while temp is not None:
-            queue += str(temp.data)
+            queue += f'{temp.data} '
             temp = temp.next
         return queue
 
