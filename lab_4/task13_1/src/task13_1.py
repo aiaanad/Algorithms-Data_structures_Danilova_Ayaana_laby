@@ -1,4 +1,3 @@
-# Declaration of Doubly Linked List
 class Node:
     def __init__(self, val):
         self.val = val
@@ -10,13 +9,11 @@ class Stack:
     def __init__(self):
         self.start = self.top = None
 
-    # Check if stack is empty
     def isEmpty(self):
         if self.start:
             return False
         return True
 
-    # pushes element onto stack
     def push(self, element):
         newP = Node(element)
         if self.start is None:
@@ -26,7 +23,6 @@ class Stack:
         self.top.next = newP
         self.top = newP
 
-    # Pops top element from stack
     def pop(self):
         if self.isEmpty():
             print('List is Empty')
@@ -35,7 +31,6 @@ class Stack:
         if self.top is not None:
             self.top.next = None
 
-    # Prints the stack
     def printstack(self):
         if self.isEmpty():
             print('List is Empty')

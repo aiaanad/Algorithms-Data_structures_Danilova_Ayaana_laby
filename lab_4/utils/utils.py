@@ -13,7 +13,6 @@ def f_read(current_task):
         else:
             args += ([int(elem) if elem.isdigit() else elem for elem in line],)
     f.close()
-    print(args)
     return args
 
 
