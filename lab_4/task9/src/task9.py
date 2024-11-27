@@ -24,11 +24,9 @@ class Clinic:
             self.last = self.last.next
 
     def find_middle(self):
-        if self.head is None:
-            return None
         _l = self.head
         r = self.last
-        while _l.data != r.data and _l.next.data != r.data:
+        while _l != r and _l.next != r:
             _l = _l.next
             r = r.prev
         return _l
@@ -37,16 +35,21 @@ class Clinic:
         if self.head is None:
             self.head = Node(data)
             self.last = self.head
+            return
+        elif self.head == self.last:
+            self.new_patient(data)
+            return
         mid = self.find_middle()
         next_to_mid = mid.next
         mid.next = Node(data)
         mid.next.prev = mid
         mid.next.next = next_to_mid
+        next_to_mid.prev = mid.next
 
     def go_doctor(self):
         if self.head is None:
             return None
-        if self.head == self.last:
+        elif self.head == self.last:
             patient = self.head
             self.head = self.last = None
             return patient.data

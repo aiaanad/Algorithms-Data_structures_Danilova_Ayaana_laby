@@ -7,7 +7,8 @@ class Node:
 
 class Stack:
     def __init__(self):
-        self.start = self.top = None
+        self.start = None
+        self.top = None
 
     def isEmpty(self):
         if self.start:
@@ -25,11 +26,16 @@ class Stack:
 
     def pop(self):
         if self.isEmpty():
-            print('List is Empty')
-            return
+            return None
+        popped_value = self.top
+        if self.start == self.top:
+            self.top = self.start = None
+            return popped_value.val
+
         self.top = self.top.prev
         if self.top is not None:
             self.top.next = None
+        return popped_value.val
 
     def printstack(self):
         if self.isEmpty():

@@ -15,10 +15,12 @@ class Stack:
         self.stack_.append((item, new_max))
 
     def pop(self):
-        return self.stack_.pop()[0]
+        if self.stack_:
+            return self.stack_.pop()[0]
 
     def get_max(self):
-        return self.stack_[-1][1]
+        if self.stack_:
+            return self.stack_[-1][1]
 
 
 def main(n, *operations):

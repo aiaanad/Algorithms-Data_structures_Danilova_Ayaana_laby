@@ -5,15 +5,15 @@ from lab_4.utils.utils import work
 
 def isValid(s: str) -> bool:
     stack = deque()
-    parenth = {
+    brackets = {
         "(": ")",
         "[": "]"
     }
     for br in s:
-        if br in parenth:
+        if br in brackets:
             stack.append(br)
         else:
-            if stack and parenth[stack.pop()] == br:
+            if stack and brackets[stack.pop()] == br:
                 continue
             else:
                 return False
@@ -22,7 +22,11 @@ def isValid(s: str) -> bool:
 
 def bracket_sequence(n, *data):
     ans = []
-    ans += ["YES" if isValid(sequence[0]) else "NO" for sequence in data]
+    for seq in data:
+        if isValid(seq[0]):
+            ans.append('YES')
+        else:
+            ans.append('NO')
     return ans
 
 

@@ -37,6 +37,14 @@ class Formation:
     def tell_neighbours(self, i):
         return f"{self.a[i].left} {self.a[i].right}"
 
+    def __repr__(self):
+        arr = ''
+        temp = self.head
+        while temp is not None:
+            arr += f' {temp.data}'
+            temp = temp.next
+        return arr
+
 
 def main(n, m, *operations):
     formation = Formation(n)
@@ -60,4 +68,5 @@ def main(n, m, *operations):
 
 if __name__ == "__main__":
     work(Path(__file__), main)
+    main(5, 1, ['right', 2, 1])
 

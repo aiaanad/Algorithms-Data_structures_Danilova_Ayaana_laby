@@ -43,9 +43,9 @@ class TestRealizeQueue(unittest.TestCase):
     def test_should_realize_queue_max_args(self):
         # given
         expected_time = 2
-        expected_result = random.sample(range(10 ** 9), 10 ** 3)
-        args = (10 ** 6,)
-        for i in range(10 ** 3):
+        expected_result = random.sample(range(10 ** 9), 5 * 10 ** 2)
+        args = (10 ** 5,)
+        for i in range(5 * 10 ** 2):
             args += (['+', expected_result[i]], ['-'])
 
         # when

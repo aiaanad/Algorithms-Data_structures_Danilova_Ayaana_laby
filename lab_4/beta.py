@@ -72,6 +72,8 @@ class Tree:
     #     if
 
 
-Tree([1, 3, 4, 2, 5])
 
+a = [1, 2, 3]
+a.insert(6, 4)
+print(a)
 
