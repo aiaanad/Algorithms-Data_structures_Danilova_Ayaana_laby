@@ -1,5 +1,6 @@
 import time
 import unittest
+import psutil
 from lab_5.task7.src.task7 import heapsort
 
 
@@ -14,7 +15,9 @@ class TestHeaSort(unittest.TestCase):
         start_time = time.perf_counter()
         result = heapsort(*args)
         result_time = time.perf_counter() - start_time
-        print("Итоговое время алгоритма:", result_time)
+        memory = psutil.Process().memory_info().rss / 1024 ** 2
+        print(f'Итоговое время алгоритма: {result_time} секунд \n'
+              f'Итоговая затрата памяти:: {memory} МБ')
 
         # then
         self.assertEqual(result, expected_result)
@@ -30,7 +33,9 @@ class TestHeaSort(unittest.TestCase):
         start_time = time.perf_counter()
         result = heapsort(*args)
         result_time = time.perf_counter() - start_time
-        print("Итоговое время алгоритма:", result_time)
+        memory = psutil.Process().memory_info().rss / 1024 ** 2
+        print(f'Итоговое время алгоритма: {result_time} секунд \n'
+              f'Итоговая затрата памяти:: {memory} МБ')
 
         # then
         self.assertEqual(result, expected_result)
@@ -46,7 +51,9 @@ class TestHeaSort(unittest.TestCase):
         start_time = time.perf_counter()
         result = heapsort(*args)
         result_time = time.perf_counter() - start_time
-        print("Итоговое время алгоритма:", result_time)
+        memory = psutil.Process().memory_info().rss / 1024 ** 2
+        print(f'Итоговое время алгоритма: {result_time} секунд \n'
+              f'Итоговая затрата памяти:: {memory} МБ')
 
         # then
         self.assertEqual(result, expected_result)

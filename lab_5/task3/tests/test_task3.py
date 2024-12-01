@@ -1,19 +1,41 @@
-import time
 import unittest
 import psutil
-from lab_5.task1.src.task1 import is_heap
+import time
+from lab_5.task3.src.task3 import processing_net_packets
+from random import randint
 
 
-class TestIsHeap(unittest.TestCase):
-    def test_should_is_heap_args1(self):
+class TestNetworkPacketProcessing(unittest.TestCase):
+
+    def test_should_processing_args1(self):
+
         # given
-        args = 5, [1, 0, 1, 2, 0]
-        expected_result = "NO"
+        args = (3, 6, [0, 2], [1, 2], [2, 2], [3, 2], [4, 2], [5, 2])
+        expected_result = [0, 2, 4, 6, 8, -1]
         expected_time = 2
 
         # when
         start_time = time.perf_counter()
-        result = is_heap(*args)
+        result = processing_net_packets(*args)
+        result_time = time.perf_counter() - start_time
+        memory = psutil.Process().memory_info().rss / 1024 ** 2
+        print(f'Итоговое время алгоритма: {result_time} секунд \n'
+              f'Итоговая затрата памяти:: {memory} МБ'
+              f'')
+
+        # then
+        self.assertEqual(result, expected_result)
+        self.assertLessEqual(result_time, expected_time, f"Значение {result_time} превышает порог {expected_time}")
+
+    def test_should_processing_args2(self):
+        # given
+        args = (2, 3, [0, 1], [3, 1], [10, 1])
+        expected_result = [0, 3, 10]
+        expected_time = 2
+
+        # when
+        start_time = time.perf_counter()
+        result = processing_net_packets(*args)
         result_time = time.perf_counter() - start_time
         memory = psutil.Process().memory_info().rss / 1024 ** 2
         print(f'Итоговое время алгоритма: {result_time} секунд \n'
@@ -23,42 +45,25 @@ class TestIsHeap(unittest.TestCase):
         self.assertEqual(result, expected_result)
         self.assertLessEqual(result_time, expected_time, f"Значение {result_time} превышает порог {expected_time}")
 
-    def test_should_is_heap_args2(self):
+    def test_should_processing_max_args(self):
         # given
-        args = 5, [1, 3, 2, 5, 4]
-        expected_result = "YES"
-        expected_time = 2
+        expected_time = 10
+        args = (10**3, 10**5)
+        packages = [[c + 10, randint(0, 10**3)] for c in range(10**5)]
+        for pair in sorted(packages):
+            args += (pair,)
 
         # when
         start_time = time.perf_counter()
-        result = is_heap(*args)
+        result = processing_net_packets(*args)
         result_time = time.perf_counter() - start_time
         memory = psutil.Process().memory_info().rss / 1024 ** 2
         print(f'Итоговое время алгоритма: {result_time} секунд \n'
               f'Итоговая затрата памяти:: {memory} МБ')
 
         # then
-        self.assertEqual(result, expected_result)
-        self.assertLessEqual(result_time, expected_time, f"Значение {result_time} превышает порог {expected_time}")
-
-    def test_should_is_heap_max(self):
-        # given
-        args = 10**6, range(2*10**9 - 10**6, 2*10**9 + 1)
-        expected_result = "YES"
-        expected_time = 2
-
-        # when
-        start_time = time.perf_counter()
-        result = is_heap(*args)
-        result_time = time.perf_counter() - start_time
-        memory = psutil.Process().memory_info().rss / 1024 ** 2
-        print(f'Итоговое время алгоритма: {result_time} секунд \n'
-              f'Итоговая затрата памяти:: {memory} МБ')
-
-        # then
-        self.assertEqual(result, expected_result)
         self.assertLessEqual(result_time, expected_time, f"Значение {result_time} превышает порог {expected_time}")
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     unittest.main()

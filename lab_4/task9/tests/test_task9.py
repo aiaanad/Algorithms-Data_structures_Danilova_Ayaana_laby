@@ -1,6 +1,7 @@
 import random
 import time
 import unittest
+import psutil
 from lab_4.task9.src.task9 import (main)
 
 
@@ -15,7 +16,9 @@ class TestClinic(unittest.TestCase):
         start_time = time.perf_counter()
         result = main(*args)
         result_time = time.perf_counter() - start_time
-        print("Итоговое время алгоритма:", result_time)
+        memory = psutil.Process().memory_info().rss / 1024 ** 2
+        print(f'Итоговое время алгоритма: {result_time} секунд \n'
+              f'Итоговая затрата памяти:: {memory} МБ')
 
         # then
         self.assertEqual(result, expected_result)
@@ -31,7 +34,9 @@ class TestClinic(unittest.TestCase):
         start_time = time.perf_counter()
         result = main(*args)
         result_time = time.perf_counter() - start_time
-        print("Итоговое время алгоритма:", result_time)
+        memory = psutil.Process().memory_info().rss / 1024 ** 2
+        print(f'Итоговое время алгоритма: {result_time} секунд \n'
+              f'Итоговая затрата памяти:: {memory} МБ')
 
         # then
         self.assertEqual(result, expected_result)
@@ -65,7 +70,9 @@ class TestClinic(unittest.TestCase):
         start_time = time.perf_counter()
         result = main(*args)
         result_time = time.perf_counter() - start_time
-        print("Итоговое время алгоритма:", result_time)
+        memory = psutil.Process().memory_info().rss / 1024 ** 2
+        print(f'Итоговое время алгоритма: {result_time} секунд \n'
+              f'Итоговая затрата памяти:: {memory} МБ')
 
         # then
         self.assertEqual(result, expected_result)

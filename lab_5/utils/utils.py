@@ -8,7 +8,8 @@ def f_read(current_task):
     for line in f:
         line = line.rstrip().split()
         if args == ():
-            args += (int(line[0]),) if len(line) == 1 else [(int(elem),) for elem in line]
+            for elem in line:
+                args += (int(elem),)
         else:
             args += ([int(elem) if elem.isdigit() else elem for elem in line],)
     f.close()
@@ -27,7 +28,9 @@ def f_write(current_task, answer):
     f.close()
 
 
-def work(current_lab, current_task, func, *dop):
+def work(current_task_path, func, *dop):
+    current_task = current_task_path.stem
+    current_lab = current_task_path.parts[-4]
     input_data = f_read(current_task)
     if len(dop) != 0:
         arr = list(input_data) if type(input_data[1]) is not list else input_data[1]

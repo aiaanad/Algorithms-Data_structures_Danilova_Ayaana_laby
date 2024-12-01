@@ -1,4 +1,4 @@
-import random
+import psutil
 import time
 import unittest
 from lab_4.task3.src.task3 import bracket_sequence
@@ -15,7 +15,9 @@ class TestBracketSequence(unittest.TestCase):
         start_time = time.perf_counter()
         result = bracket_sequence(*args)
         result_time = time.perf_counter() - start_time
-        print("Итоговое время алгоритма:", result_time)
+        memory = psutil.Process().memory_info().rss / 1024 ** 2
+        print(f'Итоговое время алгоритма: {result_time} секунд \n'
+              f'Итоговая затрата памяти:: {memory} МБ')
 
         # then
         self.assertEqual(result, expected_result)
@@ -33,7 +35,9 @@ class TestBracketSequence(unittest.TestCase):
         start_time = time.perf_counter()
         result = bracket_sequence(*args)
         result_time = time.perf_counter() - start_time
-        print("Итоговое время алгоритма:", result_time)
+        memory = psutil.Process().memory_info().rss / 1024 ** 2
+        print(f'Итоговое время алгоритма: {result_time} секунд \n'
+              f'Итоговая затрата памяти:: {memory} МБ')
 
         # then
         self.assertEqual(result, expected_result)
@@ -51,7 +55,9 @@ class TestBracketSequence(unittest.TestCase):
         start_time = time.perf_counter()
         result = bracket_sequence(*args)
         result_time = time.perf_counter() - start_time
-        print("Итоговое время алгоритма:", result_time)
+        memory = psutil.Process().memory_info().rss / 1024 ** 2
+        print(f'Итоговое время алгоритма: {result_time} секунд \n'
+              f'Итоговая затрата памяти:: {memory} МБ')
 
         # then
         self.assertEqual(result, expected_result)
