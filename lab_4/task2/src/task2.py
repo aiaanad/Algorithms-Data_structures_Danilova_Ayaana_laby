@@ -11,7 +11,6 @@ def realize_queue(n: int, *operations) -> list:
             my_queue.append(f[1])
         else:
             deleted.append(my_queue.popleft())
-    print(my_queue)
     return deleted
 
 

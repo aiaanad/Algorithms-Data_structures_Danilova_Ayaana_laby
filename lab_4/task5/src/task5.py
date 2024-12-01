@@ -27,12 +27,13 @@ def main(n, *operations):
     my_queue = Stack()
     max_values = []
     for f in operations:
-        if f[0] == 'push':
-            my_queue.push(f[1])
-        elif f[0] == 'pop':
-            my_queue.pop()
-        elif f[0] == 'max':
-            max_values.append(my_queue.get_max())
+        match f[0]:
+            case 'push':
+                my_queue.push(f[1])
+            case 'pop':
+                my_queue.pop()
+            case 'max':
+                max_values.append(my_queue.get_max())
     return max_values
 
 

@@ -1,7 +1,6 @@
-import random
 import time
 import unittest
-from lab_4.task12.src.task12 import Formation, main
+from lab_4.task12.src.task12 import main
 
 
 class TestFormation(unittest.TestCase):

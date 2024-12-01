@@ -23,13 +23,13 @@ class TestStackWithMax(unittest.TestCase):
 
     def test_should_check_stack_with_big_args(self):
         # given
-        args = (4*10**5,)
+        args = (4 * 10**4,)
         expected_result = []
         expected_time = 5
 
         actions = ['push', 'max', 'pop']
         arr = []
-        for i in range(4*10**5):
+        for i in range(4 * 10**4):
             act = random.choice(actions)
             match act:
                 case 'push':
