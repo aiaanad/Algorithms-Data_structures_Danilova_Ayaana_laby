@@ -10,6 +10,7 @@ class TestIsHeap(unittest.TestCase):
         args = 5, [1, 0, 1, 2, 0]
         expected_result = "NO"
         expected_time = 2
+        expected_memory = 256
 
         # when
         start_time = time.perf_counter()
@@ -22,12 +23,14 @@ class TestIsHeap(unittest.TestCase):
         # then
         self.assertEqual(result, expected_result)
         self.assertLessEqual(result_time, expected_time, f"Значение {result_time} превышает порог {expected_time}")
+        self.assertLessEqual(memory, expected_memory, f"Значение {memory} превышает порог {expected_memory}")
 
     def test_should_is_heap_args2(self):
         # given
         args = 5, [1, 3, 2, 5, 4]
         expected_result = "YES"
         expected_time = 2
+        expected_memory = 256
 
         # when
         start_time = time.perf_counter()
@@ -40,12 +43,14 @@ class TestIsHeap(unittest.TestCase):
         # then
         self.assertEqual(result, expected_result)
         self.assertLessEqual(result_time, expected_time, f"Значение {result_time} превышает порог {expected_time}")
+        self.assertLessEqual(memory, expected_memory, f"Значение {memory} превышает порог {expected_memory}")
 
     def test_should_is_heap_max(self):
         # given
         args = 10**6, range(2*10**9 - 10**6, 2*10**9 + 1)
         expected_result = "YES"
         expected_time = 2
+        expected_memory = 256
 
         # when
         start_time = time.perf_counter()
@@ -58,6 +63,7 @@ class TestIsHeap(unittest.TestCase):
         # then
         self.assertEqual(result, expected_result)
         self.assertLessEqual(result_time, expected_time, f"Значение {result_time} превышает порог {expected_time}")
+        self.assertLessEqual(memory, expected_memory, f"Значение {memory} превышает порог {expected_memory}")
 
 
 if __name__ == "__main__":

@@ -11,6 +11,7 @@ class TestStackWithMax(unittest.TestCase):
         args = (5, ['push', 2], ['push', 1], ['max'], ['pop'], ['max'])
         expected_result = [2, 2]
         expected_time = 2
+        expected_memory = 256
 
         # when
         start_time = time.perf_counter()
@@ -23,12 +24,14 @@ class TestStackWithMax(unittest.TestCase):
         # then
         self.assertEqual(result, expected_result)
         self.assertLessEqual(result_time, expected_time, f"Значение {result_time} превышает порог {expected_time}")
+        self.assertLessEqual(memory, expected_memory, f"Значение {memory} превышает порог {expected_memory}")
 
     def test_should_check_stack_with_big_args(self):
         # given
         args = (4 * 10**4,)
         expected_result = []
         expected_time = 5
+        expected_memory = 256
 
         actions = ['push', 'max', 'pop']
         arr = []
@@ -61,6 +64,7 @@ class TestStackWithMax(unittest.TestCase):
         # then
         self.assertEqual(result, expected_result)
         self.assertLessEqual(result_time, expected_time, f"Значение {result_time} превышает порог {expected_time}")
+        self.assertLessEqual(memory, expected_memory, f"Значение {memory} превышает порог {expected_memory}")
 
 
 if __name__ == "__main__":

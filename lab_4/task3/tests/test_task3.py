@@ -30,6 +30,7 @@ class TestBracketSequence(unittest.TestCase):
         args += tuple([seq for i in range(500)])
         expected_result = ['YES'] * 500
         expected_time = 2
+        expected_memory = 256
 
         # when
         start_time = time.perf_counter()
@@ -42,6 +43,7 @@ class TestBracketSequence(unittest.TestCase):
         # then
         self.assertEqual(result, expected_result)
         self.assertLessEqual(result_time, expected_time, f"Значение {result_time} превышает порог {expected_time}")
+        self.assertLessEqual(memory, expected_memory, f"Значение {memory} превышает порог {expected_memory}")
 
     def test_should_check_not_balanced_brackets_sequence(self):
         # given
@@ -50,6 +52,7 @@ class TestBracketSequence(unittest.TestCase):
         args += tuple([seq for i in range(500)])
         expected_result = ['NO'] * 500
         expected_time = 2
+        expected_memory = 256
 
         # when
         start_time = time.perf_counter()
@@ -62,6 +65,7 @@ class TestBracketSequence(unittest.TestCase):
         # then
         self.assertEqual(result, expected_result)
         self.assertLessEqual(result_time, expected_time, f"Значение {result_time} превышает порог {expected_time}")
+        self.assertLessEqual(memory, expected_memory, f"Значение {memory} превышает порог {expected_memory}")
 
 
 if __name__ == "__main__":

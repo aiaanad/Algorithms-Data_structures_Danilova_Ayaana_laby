@@ -11,6 +11,7 @@ class TestClinic(unittest.TestCase):
         args = (7, ['+', 1], ['+', 2], ['-'], ['+', 3], ['+', 4], ['-'], ['-'])
         expected_result = [1, 2, 3]
         expected_time = 2
+        expected_memory = 256
 
         # when
         start_time = time.perf_counter()
@@ -23,12 +24,14 @@ class TestClinic(unittest.TestCase):
         # then
         self.assertEqual(result, expected_result)
         self.assertLessEqual(result_time, expected_time, f"Значение {result_time} превышает порог {expected_time}")
+        self.assertLessEqual(memory, expected_memory, f"Значение {memory} превышает порог {expected_memory}")
 
     def test_should_clinic_args2(self):
         # given
         args = (10, ['+', 1], ['+', 2], ['*', 3], ['-'], ['+', 4], ['*', 5], ['-'], ['-'], ['-'], ['-'])
         expected_result = [1, 3, 2, 5, 4]
         expected_time = 2
+        expected_memory = 256
 
         # when
         start_time = time.perf_counter()
@@ -41,12 +44,14 @@ class TestClinic(unittest.TestCase):
         # then
         self.assertEqual(result, expected_result)
         self.assertLessEqual(result_time, expected_time, f"Значение {result_time} превышает порог {expected_time}")
+        self.assertLessEqual(memory, expected_memory, f"Значение {memory} превышает порог {expected_memory}")
 
     def test_should_clinic_max_args(self):
         # given
         args = (10**5,)
         expected_result = []
         expected_time = 60
+        expected_memory = 256
 
         actions = ['+', '*', '-']
         arr = []
@@ -77,6 +82,7 @@ class TestClinic(unittest.TestCase):
         # then
         self.assertEqual(result, expected_result)
         self.assertLessEqual(result_time, expected_time, f"Значение {result_time} превышает порог {expected_time}")
+        self.assertLessEqual(memory, expected_memory, f"Значение {memory} превышает порог {expected_memory}")
 
 
 if __name__ == "__main__":
