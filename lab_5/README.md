@@ -32,8 +32,3 @@
     ```bash
         for f in lab_5/task*/tests/test_task*; do f=${f%.py}; python -m unittest ${f////.}; done
 
-## Тестирование
-Для запуска тестов выполните:
-```bash
-      for f in lab_5/task*/tests/test_task*; do f=${f%.py}; python -m unittest ${f////.}; done
-```
