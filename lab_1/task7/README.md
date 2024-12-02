@@ -59,8 +59,3 @@
    ```
 
 
-## Тестирование
-Для запуска тестов выполните:
-```bash
-    python -m unittest lab_1.task7.tests.test_task7
-```
