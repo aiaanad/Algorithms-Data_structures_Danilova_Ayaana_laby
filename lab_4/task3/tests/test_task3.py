@@ -1,4 +1,4 @@
-import psutil
+import tracemalloc
 import time
 import unittest
 from lab_4.task3.src.task3 import bracket_sequence
@@ -10,18 +10,22 @@ class TestBracketSequence(unittest.TestCase):
         args = (2, ['([])([()]([]))'], ['[[())()]]'])
         expected_result = ['YES', 'NO']
         expected_time = 2
+        expected_memory = 256
 
         # when
         start_time = time.perf_counter()
         result = bracket_sequence(*args)
         result_time = time.perf_counter() - start_time
-        memory = psutil.Process().memory_info().rss / 1024 ** 2
-        print(f'Итоговое время алгоритма: {result_time} секунд \n'
-              f'Итоговая затрата памяти:: {memory} МБ')
+
+        tracemalloc.start()
+        bracket_sequence(*args)
+        memory = tracemalloc.get_traced_memory()[1] / 1024 / 1024
+        tracemalloc.stop()
 
         # then
         self.assertEqual(result, expected_result)
         self.assertLessEqual(result_time, expected_time, f"Значение {result_time} превышает порог {expected_time}")
+        self.assertLessEqual(memory, expected_memory, f"Значение {memory} превышает порог {expected_memory}")
 
     def test_should_check_balanced_brackets_sequence(self):
         # given
@@ -36,9 +40,11 @@ class TestBracketSequence(unittest.TestCase):
         start_time = time.perf_counter()
         result = bracket_sequence(*args)
         result_time = time.perf_counter() - start_time
-        memory = psutil.Process().memory_info().rss / 1024 ** 2
-        print(f'Итоговое время алгоритма: {result_time} секунд \n'
-              f'Итоговая затрата памяти:: {memory} МБ')
+
+        tracemalloc.start()
+        bracket_sequence(*args)
+        memory = tracemalloc.get_traced_memory()[1] / 1024 / 1024
+        tracemalloc.stop()
 
         # then
         self.assertEqual(result, expected_result)
@@ -58,9 +64,11 @@ class TestBracketSequence(unittest.TestCase):
         start_time = time.perf_counter()
         result = bracket_sequence(*args)
         result_time = time.perf_counter() - start_time
-        memory = psutil.Process().memory_info().rss / 1024 ** 2
-        print(f'Итоговое время алгоритма: {result_time} секунд \n'
-              f'Итоговая затрата памяти:: {memory} МБ')
+
+        tracemalloc.start()
+        bracket_sequence(*args)
+        memory = tracemalloc.get_traced_memory()[1] / 1024 / 1024
+        tracemalloc.stop()
 
         # then
         self.assertEqual(result, expected_result)

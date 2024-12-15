@@ -1,6 +1,6 @@
 import time
 import unittest
-import psutil
+import tracemalloc
 from lab_3.task8.src.task8 import nearest_point
 
 
@@ -16,9 +16,11 @@ class TestNearestPoint(unittest.TestCase):
         start_time = time.perf_counter()
         result = nearest_point(*data)
         result_time = time.perf_counter() - start_time
-        memory = psutil.Process().memory_info().rss / 1024 ** 2
-        print(f'Итоговое время алгоритма: {result_time} секунд \n'
-              f'Итоговая затрата памяти:: {memory} МБ')
+
+        tracemalloc.start()
+        nearest_point(*data)
+        memory = tracemalloc.get_traced_memory()[1] / 1024 / 1024
+        tracemalloc.stop()
 
         # then
         self.assertEqual(result, expected_result)
@@ -36,9 +38,11 @@ class TestNearestPoint(unittest.TestCase):
         start_time = time.perf_counter()
         result = nearest_point(*data)
         result_time = time.perf_counter() - start_time
-        memory = psutil.Process().memory_info().rss / 1024 ** 2
-        print(f'Итоговое время алгоритма: {result_time} секунд \n'
-              f'Итоговая затрата памяти:: {memory} МБ')
+
+        tracemalloc.start()
+        nearest_point(*data)
+        memory = tracemalloc.get_traced_memory()[1] / 1024 / 1024
+        tracemalloc.stop()
 
         # then
         self.assertEqual(result, expected_result)

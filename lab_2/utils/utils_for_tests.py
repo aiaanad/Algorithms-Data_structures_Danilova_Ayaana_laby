@@ -22,16 +22,3 @@ def memory(func):
 
     return wrapper
 
-
-def min_time_memory(func, *args):
-    print("Для минимальных значений")
-    memory(func)(*args)
-    timeit(func)(*args)
-    print()
-
-
-def max_time_memory(func, *args):
-    print("Для максимальных значений")
-    memory(func)(*args)
-    timeit(func)(*args)
-    print()

@@ -1,7 +1,7 @@
 import random
 import time
+import tracemalloc
 import unittest
-import psutil
 from lab_3.task1.src.task1 import randomized_quicksort
 
 
@@ -17,9 +17,11 @@ class TestRandomizedQuicksort(unittest.TestCase):
         start_time = time.perf_counter()
         result = randomized_quicksort(data, 0, len(data) - 1)
         result_time = time.perf_counter() - start_time
-        memory = psutil.Process().memory_info().rss / 1024 ** 2
-        print(f'Итоговое время алгоритма: {result_time} секунд \n'
-              f'Итоговая затрата памяти:: {memory} МБ')
+
+        tracemalloc.start()
+        randomized_quicksort(data, 0, len(data) - 1)
+        memory = tracemalloc.get_traced_memory()[1] / 1024 / 1024
+        tracemalloc.stop()
 
         # then
         self.assertEqual(result, expected_result)
@@ -37,9 +39,11 @@ class TestRandomizedQuicksort(unittest.TestCase):
         start_time = time.perf_counter()
         result = randomized_quicksort(data, 0, len(data) - 1)
         result_time = time.perf_counter() - start_time
-        memory = psutil.Process().memory_info().rss / 1024 ** 2
-        print(f'Итоговое время алгоритма: {result_time} секунд \n'
-              f'Итоговая затрата памяти:: {memory} МБ')
+
+        tracemalloc.start()
+        randomized_quicksort(data, 0, len(data) - 1)
+        memory = tracemalloc.get_traced_memory()[1] / 1024 / 1024
+        tracemalloc.stop()
 
         # then
         self.assertEqual(result, expected_result)

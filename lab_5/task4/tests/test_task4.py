@@ -1,5 +1,5 @@
 import unittest
-import psutil
+import tracemalloc
 import time
 from lab_5.task4.src.task4 import MinHeap
 from random import randint
@@ -17,9 +17,11 @@ class TestHeapSortSwaps(unittest.TestCase):
         start_time = time.perf_counter()
         result = MinHeap(*data).heap_sort()
         result_time = time.perf_counter() - start_time
-        memory = psutil.Process().memory_info().rss / 1024 ** 2
-        print(f'Итоговое время алгоритма: {result_time} секунд \n'
-              f'Итоговая затрата памяти:: {memory} МБ')
+
+        tracemalloc.start()
+        MinHeap(*data).heap_sort()
+        memory = tracemalloc.get_traced_memory()[1] / 1024 / 1024
+        tracemalloc.stop()
 
         # then
         self.assertEqual(result, expected_result)
@@ -35,11 +37,13 @@ class TestHeapSortSwaps(unittest.TestCase):
 
         # when
         start_time = time.perf_counter()
-        result = MinHeap(data[0], data[1]).heap_sort()
+        result = MinHeap(*data).heap_sort()
         result_time = time.perf_counter() - start_time
-        memory = psutil.Process().memory_info().rss / 1024 ** 2
-        print(f'Итоговое время алгоритма: {result_time} секунд \n'
-              f'Итоговая затрата памяти:: {memory} МБ')
+
+        tracemalloc.start()
+        MinHeap(*data).heap_sort()
+        memory = tracemalloc.get_traced_memory()[1] / 1024 / 1024
+        tracemalloc.stop()
 
         # then
         self.assertEqual(result, expected_result)
@@ -56,11 +60,13 @@ class TestHeapSortSwaps(unittest.TestCase):
 
         # when
         start_time = time.perf_counter()
-        result = MinHeap(*args).heap_sort()
+        MinHeap(*args).heap_sort()
         result_time = time.perf_counter() - start_time
-        memory = psutil.Process().memory_info().rss / 1024 ** 2
-        print(f'Итоговое время алгоритма: {result_time} секунд \n'
-              f'Итоговая затрата памяти:: {memory} МБ')
+
+        tracemalloc.start()
+        MinHeap(*args).heap_sort()
+        memory = tracemalloc.get_traced_memory()[1] / 1024 / 1024
+        tracemalloc.stop()
 
         # then
         self.assertLessEqual(result_time, expected_time, f"Значение {result_time} превышает порог {expected_time}")

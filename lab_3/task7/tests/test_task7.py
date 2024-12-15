@@ -1,6 +1,6 @@
 import time
 import unittest
-import psutil
+import tracemalloc
 from lab_3.task7.src.task7 import radix_sort
 
 
@@ -16,9 +16,11 @@ class TestRadixSort(unittest.TestCase):
         start_time = time.perf_counter()
         result = radix_sort(*data)
         result_time = time.perf_counter() - start_time
-        memory = psutil.Process().memory_info().rss / 1024 ** 2
-        print(f'Итоговое время алгоритма: {result_time} секунд \n'
-              f'Итоговая затрата памяти:: {memory} МБ')
+
+        tracemalloc.start()
+        radix_sort(*data)
+        memory = tracemalloc.get_traced_memory()[1] / 1024 / 1024
+        tracemalloc.stop()
 
         # then
         self.assertEqual(result, expected_result)
@@ -36,9 +38,11 @@ class TestRadixSort(unittest.TestCase):
         start_time = time.perf_counter()
         result = radix_sort(*data)
         result_time = time.perf_counter() - start_time
-        memory = psutil.Process().memory_info().rss / 1024 ** 2
-        print(f'Итоговое время алгоритма: {result_time} секунд \n'
-              f'Итоговая затрата памяти:: {memory} МБ')
+
+        tracemalloc.start()
+        radix_sort(*data)
+        memory = tracemalloc.get_traced_memory()[1] / 1024 / 1024
+        tracemalloc.stop()
 
         # then
         self.assertEqual(result, expected_result)
@@ -56,9 +60,11 @@ class TestRadixSort(unittest.TestCase):
         start_time = time.perf_counter()
         result = radix_sort(*data)
         result_time = time.perf_counter() - start_time
-        memory = psutil.Process().memory_info().rss / 1024 ** 2
-        print(f'Итоговое время алгоритма: {result_time} секунд \n'
-              f'Итоговая затрата памяти:: {memory} МБ')
+
+        tracemalloc.start()
+        radix_sort(*data)
+        memory = tracemalloc.get_traced_memory()[1] / 1024 / 1024
+        tracemalloc.stop()
 
         # then
         self.assertEqual(result, expected_result)

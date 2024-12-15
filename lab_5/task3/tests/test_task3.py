@@ -1,5 +1,5 @@
 import unittest
-import psutil
+import tracemalloc
 import time
 from lab_5.task3.src.task3 import processing_net_packets
 from random import randint
@@ -19,10 +19,11 @@ class TestNetworkPacketProcessing(unittest.TestCase):
         start_time = time.perf_counter()
         result = processing_net_packets(*args)
         result_time = time.perf_counter() - start_time
-        memory = psutil.Process().memory_info().rss / 1024 ** 2
-        print(f'Итоговое время алгоритма: {result_time} секунд \n'
-              f'Итоговая затрата памяти:: {memory} МБ'
-              f'')
+
+        tracemalloc.start()
+        processing_net_packets(*args)
+        memory = tracemalloc.get_traced_memory()[1] / 1024 / 1024
+        tracemalloc.stop()
 
         # then
         self.assertEqual(result, expected_result)
@@ -40,9 +41,11 @@ class TestNetworkPacketProcessing(unittest.TestCase):
         start_time = time.perf_counter()
         result = processing_net_packets(*args)
         result_time = time.perf_counter() - start_time
-        memory = psutil.Process().memory_info().rss / 1024 ** 2
-        print(f'Итоговое время алгоритма: {result_time} секунд \n'
-              f'Итоговая затрата памяти:: {memory} МБ')
+
+        tracemalloc.start()
+        processing_net_packets(*args)
+        memory = tracemalloc.get_traced_memory()[1] / 1024 / 1024
+        tracemalloc.stop()
 
         # then
         self.assertEqual(result, expected_result)
@@ -60,11 +63,13 @@ class TestNetworkPacketProcessing(unittest.TestCase):
 
         # when
         start_time = time.perf_counter()
-        result = processing_net_packets(*args)
+        processing_net_packets(*args)
         result_time = time.perf_counter() - start_time
-        memory = psutil.Process().memory_info().rss / 1024 ** 2
-        print(f'Итоговое время алгоритма: {result_time} секунд \n'
-              f'Итоговая затрата памяти:: {memory} МБ')
+
+        tracemalloc.start()
+        processing_net_packets(*args)
+        memory = tracemalloc.get_traced_memory()[1] / 1024 / 1024
+        tracemalloc.stop()
 
         # then
         self.assertLessEqual(result_time, expected_time, f"Значение {result_time} превышает порог {expected_time}")

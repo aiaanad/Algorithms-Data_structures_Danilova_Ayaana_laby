@@ -1,6 +1,6 @@
 import time
 import unittest
-import psutil
+import tracemalloc
 from lab_3.task5.src.task5 import hirsh_index
 
 
@@ -16,9 +16,11 @@ class TestHirshIndex(unittest.TestCase):
         start_time = time.perf_counter()
         result = hirsh_index(*data)
         result_time = time.perf_counter() - start_time
-        memory = psutil.Process().memory_info().rss / 1024 ** 2
-        print(f'Итоговое время алгоритма: {result_time} секунд \n'
-              f'Итоговая затрата памяти:: {memory} МБ')
+
+        tracemalloc.start()
+        hirsh_index(*data)
+        memory = tracemalloc.get_traced_memory()[1] / 1024 / 1024
+        tracemalloc.stop()
 
         # then
         self.assertEqual(result, expected_result)
@@ -36,9 +38,11 @@ class TestHirshIndex(unittest.TestCase):
         start_time = time.perf_counter()
         result = hirsh_index(*data)
         result_time = time.perf_counter() - start_time
-        memory = psutil.Process().memory_info().rss / 1024 ** 2
-        print(f'Итоговое время алгоритма: {result_time} секунд \n'
-              f'Итоговая затрата памяти:: {memory} МБ')
+
+        tracemalloc.start()
+        hirsh_index(*data)
+        memory = tracemalloc.get_traced_memory()[1] / 1024 / 1024
+        tracemalloc.stop()
 
         # then
         self.assertEqual(result, expected_result)

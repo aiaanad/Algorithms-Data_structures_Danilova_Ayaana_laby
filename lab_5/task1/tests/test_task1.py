@@ -1,6 +1,6 @@
 import time
 import unittest
-import psutil
+import tracemalloc
 from lab_5.task1.src.task1 import is_heap
 
 
@@ -16,9 +16,11 @@ class TestIsHeap(unittest.TestCase):
         start_time = time.perf_counter()
         result = is_heap(*args)
         result_time = time.perf_counter() - start_time
-        memory = psutil.Process().memory_info().rss / 1024 ** 2
-        print(f'Итоговое время алгоритма: {result_time} секунд \n'
-              f'Итоговая затрата памяти:: {memory} МБ')
+
+        tracemalloc.start()
+        is_heap(*args)
+        memory = tracemalloc.get_traced_memory()[1] / 1024 / 1024
+        tracemalloc.stop()
 
         # then
         self.assertEqual(result, expected_result)
@@ -36,9 +38,11 @@ class TestIsHeap(unittest.TestCase):
         start_time = time.perf_counter()
         result = is_heap(*args)
         result_time = time.perf_counter() - start_time
-        memory = psutil.Process().memory_info().rss / 1024 ** 2
-        print(f'Итоговое время алгоритма: {result_time} секунд \n'
-              f'Итоговая затрата памяти:: {memory} МБ')
+
+        tracemalloc.start()
+        is_heap(*args)
+        memory = tracemalloc.get_traced_memory()[1] / 1024 / 1024
+        tracemalloc.stop()
 
         # then
         self.assertEqual(result, expected_result)
@@ -56,9 +60,11 @@ class TestIsHeap(unittest.TestCase):
         start_time = time.perf_counter()
         result = is_heap(*args)
         result_time = time.perf_counter() - start_time
-        memory = psutil.Process().memory_info().rss / 1024 ** 2
-        print(f'Итоговое время алгоритма: {result_time} секунд \n'
-              f'Итоговая затрата памяти:: {memory} МБ')
+
+        tracemalloc.start()
+        is_heap(*args)
+        memory = tracemalloc.get_traced_memory()[1] / 1024 / 1024
+        tracemalloc.stop()
 
         # then
         self.assertEqual(result, expected_result)

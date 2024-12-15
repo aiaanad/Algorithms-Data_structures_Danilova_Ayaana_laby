@@ -1,7 +1,7 @@
 import random
 import time
 import unittest
-import psutil
+import tracemalloc
 from lab_4.task2.src.task2 import realize_queue
 
 
@@ -17,9 +17,11 @@ class TestRealizeQueue(unittest.TestCase):
         start_time = time.perf_counter()
         result = realize_queue(*data)
         result_time = time.perf_counter() - start_time
-        memory = psutil.Process().memory_info().rss / 1024 ** 2
-        print(f'Итоговое время алгоритма: {result_time} секунд \n'
-              f'Итоговая затрата памяти:: {memory} МБ')
+
+        tracemalloc.start()
+        realize_queue(*data)
+        memory = tracemalloc.get_traced_memory()[1] / 1024 / 1024
+        tracemalloc.stop()
 
         # then
         self.assertEqual(result, expected_result)
@@ -41,9 +43,11 @@ class TestRealizeQueue(unittest.TestCase):
         start_time = time.perf_counter()
         result = realize_queue(m, *operations)
         result_time = time.perf_counter() - start_time
-        memory = psutil.Process().memory_info().rss / 1024 ** 2
-        print(f'Итоговое время алгоритма: {result_time} секунд \n'
-              f'Итоговая затрата памяти:: {memory} МБ')
+
+        tracemalloc.start()
+        realize_queue(m, *operations)
+        memory = tracemalloc.get_traced_memory()[1] / 1024 / 1024
+        tracemalloc.stop()
 
         # then
         self.assertEqual(result, expected_result)

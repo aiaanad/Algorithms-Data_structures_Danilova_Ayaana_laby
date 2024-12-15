@@ -1,7 +1,7 @@
 import random
 import time
 import unittest
-import psutil
+import tracemalloc
 from lab_4.task5.src.task5 import main
 
 
@@ -17,9 +17,11 @@ class TestStackWithMax(unittest.TestCase):
         start_time = time.perf_counter()
         result = main(*args)
         result_time = time.perf_counter() - start_time
-        memory = psutil.Process().memory_info().rss / 1024 ** 2
-        print(f'Итоговое время алгоритма: {result_time} секунд \n'
-              f'Итоговая затрата памяти:: {memory} МБ')
+
+        tracemalloc.start()
+        main(*args)
+        memory = tracemalloc.get_traced_memory()[1] / 1024 / 1024
+        tracemalloc.stop()
 
         # then
         self.assertEqual(result, expected_result)
@@ -57,9 +59,11 @@ class TestStackWithMax(unittest.TestCase):
         start_time = time.perf_counter()
         result = main(*args)
         result_time = time.perf_counter() - start_time
-        memory = psutil.Process().memory_info().rss / 1024 ** 2
-        print(f'Итоговое время алгоритма: {result_time} секунд \n'
-              f'Итоговая затрата памяти:: {memory} МБ')
+
+        tracemalloc.start()
+        main(*args)
+        memory = tracemalloc.get_traced_memory()[1] / 1024 / 1024
+        tracemalloc.stop()
 
         # then
         self.assertEqual(result, expected_result)
