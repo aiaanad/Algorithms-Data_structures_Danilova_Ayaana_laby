@@ -54,10 +54,3 @@ Pop(). Нетрудно реализовать его таким образом,
    ```bash
    python -m unittest lab_4.task5.tests.test_task5
    ```
-
-
-## Тестирование
-Для запуска тестов выполните:
-```bash
-    python -m unittest lab_4.task5.tests.test_task5
-```

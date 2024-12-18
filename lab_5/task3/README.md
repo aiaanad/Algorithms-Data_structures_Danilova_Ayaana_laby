@@ -76,9 +76,3 @@
    python -m unittest lab_5.task3.tests.test_task3
    ```
 
-
-## Тестирование
-Для запуска тестов выполните:
-```bash
-    python -m unittest lab_5.task3.tests.test_task3
-```

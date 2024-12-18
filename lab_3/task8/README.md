@@ -54,9 +54,3 @@ n - общее количество точек на плоскости и чер
    python -m unittest lab_3.task8.tests.test_task8
    ```
 
-
-## Тестирование
-Для запуска тестов выполните:
-```bash
-    python -m unittest lab_3.task8.tests.test_task8
-```

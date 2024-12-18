@@ -7,14 +7,16 @@ def f_read(current_task):
     f = open(path, 'r')
     for line in f:
         line = line.rstrip().split()
-        if args == () and line[0].isdigit():
-            for elem in line:
-                for x in elem:
-                    args += (int(x),)
+        if line:
+            if args == () and line[0].isdigit():
+                for elem in line:
+                    for x in elem:
+                        args += (int(x),)
+            else:
+                args += ([int(elem) if elem.isdigit() else elem for elem in line],)
         else:
-            args += ([int(elem) if elem.isdigit() else elem for elem in line],)
+            args = ([''], [''])
     f.close()
-    print(args)
     return args
 
 
@@ -48,5 +50,3 @@ def work(current_task_path, func, *dop):
                     OUTPUT DATA: {result}
 
             ''')
-
-

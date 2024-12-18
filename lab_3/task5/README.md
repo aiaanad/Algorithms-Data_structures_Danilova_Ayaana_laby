@@ -59,10 +59,3 @@ h из его/её Np статей цитируются как минимум h 
    python -m unittest lab_3.task5.tests.test_task5
    ```
 
-
-## Тестирование
-Для запуска тестов выполните:
-```bash
-    python -m unittest lab_3.task5.tests.test_task5
-```
-

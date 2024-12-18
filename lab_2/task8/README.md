@@ -60,9 +60,3 @@ c0 = a0b0
    python -m unittest lab_2.task8.tests.test_task8
    ```
 
-
-## Тестирование
-Для запуска тестов выполните:
-```bash
-    python -m unittest lab_2.task8.tests.test_task8
-```

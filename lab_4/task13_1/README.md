@@ -23,17 +23,10 @@ c проверкой на переполнение и опустошения о�
    ```
 3. Запустите программу:
    ```bash
-   python -m lab_4.task12.src.task12
+   python -m lab_4.task13_1.src.task13_1
    ```
 
 4. Запуск тестов:
    ```bash
-   python -m unittest lab_4.task12.tests.test_task12
+   python -m unittest lab_4.task13_1.tests.test_task13_1
    ```
-
-
-## Тестирование
-Для запуска тестов выполните:
-```bash
-    python -m unittest lab_4.task12.tests.test_task12
-```

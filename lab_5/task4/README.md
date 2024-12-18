@@ -68,10 +68,3 @@ min-heap вместо max-heap.
    ```bash
    python -m unittest lab_5.task4.tests.test_task4
    ```
-
-
-## Тестирование
-Для запуска тестов выполните:
-```bash
-    python -m unittest lab_5.task4.tests.test_task4
-```

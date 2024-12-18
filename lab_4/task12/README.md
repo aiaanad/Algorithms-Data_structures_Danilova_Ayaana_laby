@@ -85,9 +85,3 @@ name I, выведите в отдельной строке два числа - 
    python -m unittest lab_4.task12.tests.test_task12
    ```
 
-
-## Тестирование
-Для запуска тестов выполните:
-```bash
-    python -m unittest lab_4.task12.tests.test_task12
-```

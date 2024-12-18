@@ -52,10 +52,3 @@ b0, ...bk−1, 1 ≤ bj ≤ 10^9 для всех 0 ≤ j < k.
    ```bash
    python -m unittest lab_2.task4.tests.test_task4
    ```
-
-
-## Тестирование
-Для запуска тестов выполните:
-```bash
-    python -m unittest lab_2.task4.tests.test_task4
-```

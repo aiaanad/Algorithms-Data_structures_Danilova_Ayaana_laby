@@ -54,9 +54,3 @@ n(n − 1)/2).
    ```bash
    python -m unittest lab_2.task3.tests.test_task3
    ```
-
-
-## Тестирование
-Для запуска тестов выполните:
-```bash
-    python -m unittest lab_2.task3.tests.test_task3```

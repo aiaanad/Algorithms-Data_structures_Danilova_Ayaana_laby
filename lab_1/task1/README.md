@@ -48,7 +48,7 @@
 
 4. Запуск тестов:
    ```bash
-   python -m unittest lab_1.task1.tests.tests
+   python -m unittest lab_1.task1.tests.test_task1
    ```
 
 

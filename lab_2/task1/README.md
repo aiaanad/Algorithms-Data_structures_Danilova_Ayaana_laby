@@ -60,12 +60,6 @@
 
 4. Запуск тестов:
    ```bash
-   python -m unittest lab_2.task1.tests.tests
+   python -m unittest lab_2.task1.tests.test_task1
    ```
 
-
-## Тестирование
-Для запуска тестов выполните:
-```bash
-    python -m unittest lab_2.task1.tests.tests
-```
