@@ -58,5 +58,3 @@ def main(m, n, *actions):
 
 if __name__ == "__main__":
     work(Path(__file__), main)
-    a = HashTableChaining(5)
-    print(a.hash_func('third'))

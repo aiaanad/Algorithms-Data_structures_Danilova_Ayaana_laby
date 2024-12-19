@@ -40,41 +40,41 @@ class TestHashTable(unittest.TestCase):
         self.ht.add_key("key2")
         self.assertTrue(self.ht.key_in_table("key2"))
 
-    # def test_should_ht_with_max_args(self):
-    #     # given
-    #     args = (5 * 10 ** 5,)
-    #     expected_result = []
-    #     expected_time = 2
-    #     expected_memory = 256
-    #
-    #     arr = []
-    #     for i in range(args[0]):
-    #         act = random.choice(['A', 'D', '?'])
-    #         val = random.randint(1, 10 ** 9)
-    #         args += ([act, val],)
-    #         match act:
-    #             case 'A':
-    #                 arr.append(val)
-    #             case 'D':
-    #                 if val in arr:
-    #                     arr.pop(arr.index(val))
-    #             case '?':
-    #                 expected_result += 'Y\n' if val in arr else 'N\n'
-    #
-    #     # when
-    #     start_time = time.perf_counter()
-    #     result = main(*args)
-    #     result_time = time.perf_counter() - start_time
-    #
-    #     tracemalloc.start()
-    #     main(*args)
-    #     memory = tracemalloc.get_traced_memory()[1] / 1024 / 1024
-    #     tracemalloc.stop()
-    #
-    #     # then
-    #     self.assertEqual(result, expected_result)
-    #     self.assertLessEqual(result_time, expected_time, f"Значение {result_time} превышает порог {expected_time}")
-    #     self.assertLessEqual(memory, expected_memory, f"Значение {memory} превышает порог {expected_memory}")
+    def test_should_ht_with_max_args(self):
+        # given
+        args = (10 ** 5,)
+        expected_result = []
+        expected_time = 2
+        expected_memory = 256
+
+        arr = []
+        for i in range(args[0]):
+            act = random.choice(['A', 'D', '?'])
+            val = random.randint(1, 10 ** 9)
+            args += ([act, val],)
+            match act:
+                case 'A':
+                    arr.append(val)
+                case 'D':
+                    if val in arr:
+                        arr.pop(arr.index(val))
+                case '?':
+                    expected_result += 'Y' if val in arr else 'N'
+
+        # when
+        start_time = time.perf_counter()
+        result = main(*args)
+        result_time = time.perf_counter() - start_time
+
+        tracemalloc.start()
+        main(*args)
+        memory = tracemalloc.get_traced_memory()[1] / 1024 / 1024
+        tracemalloc.stop()
+
+        # then
+        self.assertEqual(result, expected_result)
+        self.assertLessEqual(result_time, expected_time, f"Значение {result_time} превышает порог {expected_time}")
+        self.assertLessEqual(memory, expected_memory, f"Значение {memory} превышает порог {expected_memory}")
 
 
 if __name__ == "__main__":
