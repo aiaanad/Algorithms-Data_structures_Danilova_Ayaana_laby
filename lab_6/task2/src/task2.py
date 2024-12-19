@@ -17,6 +17,7 @@ def main(n, *actions):
     ans = []
     book = PhoneBook()
     for act in actions:
+        print(act)
         match act[0]:
             case 'add':
                 book.add_key(act[1], act[2])

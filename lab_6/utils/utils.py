@@ -9,24 +9,26 @@ def f_read(current_task):
         line = line.rstrip().split()
         if args == () and line[0].isdigit():
             for elem in line:
-                for x in elem:
-                    args += (int(x),)
+                args += (int(elem),)
         else:
-            args += ([int(elem) if elem.isdigit() else elem for elem in line],)
+            if len(line) == 1 and line[0].isdigit():
+                args += (int(line[0]),)
+            else:
+                args += ([int(elem) if elem.isdigit() else elem for elem in line],)
     f.close()
-    print(args)
     return args
 
 
 def f_write(current_task, answer):
     path = pathlib.Path(__file__).parent.parent.joinpath(current_task, 'txtf', 'output.txt')
     f = open(path, 'w')
-    if type(answer) is not str:
-        if len(answer) > 1:
-            answer = '\n'.join(map(str, answer))
-        else:
-            answer = str(answer) + '\n'
-    f.write(answer)
+    if type(answer) is str:
+        f.write(answer)
+    elif type(answer) is int:
+        f.write(str(answer))
+    else:
+        for elem in answer:
+            f.write(f'{elem}\n')
     f.close()
 
 
