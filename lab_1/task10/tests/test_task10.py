@@ -1,7 +1,7 @@
 import time
 import unittest
 import tracemalloc
-from lab_1.task10.src.task10 import palindrom
+from lab_1.task10.src.task10 import palindrome
 
 
 class TestPalindrom(unittest.TestCase):
@@ -14,11 +14,11 @@ class TestPalindrom(unittest.TestCase):
 
         # when
         start_time = time.perf_counter()
-        result = palindrom(*data)
+        result = palindrome(*data)
         result_time = time.perf_counter() - start_time
 
         tracemalloc.start()
-        palindrom(*data)
+        palindrome(*data)
         memory = tracemalloc.get_traced_memory()[1] / 1024 / 1024
         tracemalloc.stop()
 
