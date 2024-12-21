@@ -60,5 +60,3 @@ def main(n, m, *operations):
 
 if __name__ == "__main__":
     work(Path(__file__), main)
-    main(5, 1, ['right', 2, 1])
-

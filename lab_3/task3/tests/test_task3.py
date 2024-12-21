@@ -7,7 +7,7 @@ from lab_3.task3.src.task3 import bugaboo
 class TestBugaboo(unittest.TestCase):
     def test_should_bugaboo_args1(self):
         # given
-        data = 3, 2, [2, 1, 3]
+        data = [3, 2], [2, 1, 3]
         expected_result = "НЕТ"
         expected_time = 2
         expected_memory = 256
@@ -29,7 +29,7 @@ class TestBugaboo(unittest.TestCase):
 
     def test_should_bugaboo_args2(self):
         # given
-        data = 5, 3, [1, 5, 3, 4, 1]
+        data = [5, 3], [1, 5, 3, 4, 1]
         expected_result = "ДА"
         expected_time = 2
         expected_memory = 256

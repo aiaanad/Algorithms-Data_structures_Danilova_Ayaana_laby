@@ -9,7 +9,8 @@ def is_correct(a: list) -> bool:
     return True
 
 
-def bugaboo(n: int, k: int, a: list) -> str:
+def bugaboo(nk: list, a: list) -> str:
+    n, k = nk[0], nk[1]
     for i in range(n - k):
         if a[i] > a[i + k]:
             a[i], a[i + k] = a[i + k], a[i]

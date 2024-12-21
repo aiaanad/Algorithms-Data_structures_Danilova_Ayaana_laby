@@ -1,22 +1,61 @@
 import pathlib
 
 
+def is_number(string):
+    try:
+        float(string)
+        return True
+    except ValueError:
+        return False
+
+
+def convert_one_elem(string):
+    if is_number(string):
+        if '.' in string:
+            return float(string)
+        return int(string)
+
+    return string.rstrip()
+
+
+def convert_list(string):
+    list_ = []
+    for elem in string.rstrip().split():
+        list_.append(convert_one_elem(elem))
+    return list_
+
+
+def is_first_numbers(string):
+    if len(string.split()) <= 2:
+        l_ = string.split()
+        if is_number(l_[0]) and is_number(l_[1]):
+            return True
+    return False
+
+
+def convert_first_numbers(string):
+    nums = convert_list(string)
+    res = ()
+    for elem in nums:
+        res += (elem,)
+    return res
+
+
+def convert_line(string):
+    if len(string.split()) == 1:
+        return (convert_one_elem(string),)
+
+    return (convert_list(string),)
+
+
 def f_read(current_task):
     path = pathlib.Path(__file__).parent.parent.joinpath(current_task, 'txtf', 'input.txt')
     args = ()
     f = open(path, 'r')
-    arr = []
     for line in f:
-        line = line.rstrip()
-        if args == ():
-            args += (int(line),) if len(line.split()) == 1 else tuple([int(elem) for elem in line.split()])
-        else:
-            if line.split()[0][1:].isdigit() or line.split()[0].isdigit():
-                arr.append((int(line) if len(line.split()) == 1 else [int(elem) for elem in line.split()]))
-            else:
-                arr.append([elem for elem in line])
-    args += tuple(arr) if len(arr) <= 1 else (arr,)
+        args += convert_line(line)
     f.close()
+    print(args)
     return args
 
 
@@ -32,12 +71,10 @@ def f_write(current_task, answer):
 
 
 def work(current_lab, current_task, func, *dop):
-    input_data = f_read(current_task)
+    args = f_read(current_task)
     if len(dop) != 0:
-        arr = list(input_data) if type(input_data[1]) is not list else input_data[1]
-        args = (arr, 0, len(arr) - 1)
-    else:
-        args = tuple(input_data)
+        args = args[-1], 0, len(args[-1]) - 1
+
     result = func(*args)
     f_write(current_task, result)
     print(

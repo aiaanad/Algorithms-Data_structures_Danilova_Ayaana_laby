@@ -3,8 +3,9 @@ from lab_3.utils.utils import work
 from lab_3.task1.src.task1 import partition3
 
 
-def hirsh_index(a: list, l: int, r: int) -> int:
+def hirsh_index(a: list, l, r) -> int:
     res = []
+
     for i in range(r + 1):
         k = i
         a[l], a[k] = a[k], a[l]

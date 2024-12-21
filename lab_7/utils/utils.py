@@ -1,25 +1,62 @@
 import pathlib
 
 
+def is_number(string):
+    try:
+        float(string)
+        return True
+    except ValueError:
+        return False
+
+
+def convert_one_elem(string):
+    if is_number(string):
+        if '.' in string:
+            return float(string)
+        return int(string)
+
+    return string.rstrip()
+
+
+def convert_list(string):
+    list_ = []
+    for elem in string.rstrip().split():
+        list_.append(convert_one_elem(elem))
+    return list_
+
+
+def is_first_numbers(string):
+    if len(string.split()) <= 2:
+        l_ = string.split()
+        if is_number(l_[0]) and is_number(l_[1]):
+            return True
+    return False
+
+
+def convert_first_numbers(string):
+    nums = convert_list(string)
+    res = ()
+    for elem in nums:
+        res += (elem,)
+    return res
+
+
+def convert_line(string):
+    if len(string.split()) == 1:
+        return (convert_one_elem(string),)
+
+    return (convert_list(string),)
+
+
 def f_read(current_task):
     path = pathlib.Path(__file__).parent.parent.joinpath(current_task, 'txtf', 'input.txt')
     args = ()
     f = open(path, 'r')
-    if not f:
-        args = ([''], [''])
-        f.close()
-        return args
-
     for line in f:
-        line = line.rstrip().split()
         if args == () and line[0].isdigit():
-            for elem in line:
-                args += (int(elem),)
+            args += convert_first_numbers(line)
         else:
-            if len(line) == 1 and line[0].isdigit():
-                args += (int(line[0]),)
-            else:
-                args += ([int(elem) if elem.isdigit() else elem for elem in line],)
+            args += convert_line(line)
     f.close()
     return args
 
@@ -37,17 +74,14 @@ def f_write(current_task, answer):
     f.close()
 
 
-def work(current_task_path, func, *dop):
+def work(current_task_path, func):
     current_task = current_task_path.stem
     current_lab = current_task_path.parts[-4]
-    input_data = f_read(current_task)
-    if len(dop) != 0:
-        arr = list(input_data) if type(input_data[1]) is not list else input_data[1]
-        args = (arr, 0, len(arr) - 1)
-    else:
-        args = tuple(input_data)
+
+    args = f_read(current_task)
     result = func(*args)
     f_write(current_task, result)
+
     print(
         f'''LAB NUMBER: {current_lab[4:]}
             TASK NUMBER: {current_task[4:]}

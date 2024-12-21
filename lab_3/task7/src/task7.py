@@ -2,8 +2,10 @@ from pathlib import Path
 from lab_3.utils.utils import work
 
 
-def radix_sort(n: int, m: int, k: int, a: list) -> list:
-    original = a
+def radix_sort(nmk: list, *a) -> list:
+    n, m, k = nmk[0], nmk[1], nmk[2]
+    original = list(a)
+    print(original)
     alpha = 26
     for i in range(m - 1, m - k - 1, -1):
         res = [''] * n

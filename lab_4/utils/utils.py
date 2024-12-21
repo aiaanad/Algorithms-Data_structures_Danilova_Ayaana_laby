@@ -28,17 +28,14 @@ def f_write(current_task, answer):
     f.close()
 
 
-def work(file, func, *dop):
+def work(file, func):
     current_lab = file.parts[-4]
     current_task = file.stem
-    input_data = f_read(current_task)
-    if len(dop) != 0:
-        arr = list(input_data) if type(input_data[1]) is not list else input_data[1]
-        args = (arr, 0, len(arr) - 1)
-    else:
-        args = tuple(input_data)
+
+    args = f_read(current_task)
     result = func(*args)
     f_write(current_task, result)
+
     print(
         f'''LAB NUMBER: {current_lab[4:]}
             TASK NUMBER: {current_task[4:]}

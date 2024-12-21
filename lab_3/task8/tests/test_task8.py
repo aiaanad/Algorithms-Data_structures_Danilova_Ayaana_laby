@@ -7,7 +7,7 @@ from lab_3.task8.src.task8 import nearest_point
 class TestNearestPoint(unittest.TestCase):
     def test_should_nearest_point_args1(self):
         # given
-        data = 2, 1, [[1, 3], [-2, 2]]
+        data = [2, 1], [1, 3], [-2, 2]
         expected_result = [[-2, 2]]
         expected_time = 2
         expected_memory = 256
@@ -29,7 +29,7 @@ class TestNearestPoint(unittest.TestCase):
 
     def test_should_nearest_point_args2(self):
         # given
-        data = 3, 2, [[3, 3], [5, -1], [-2, 4]]
+        data = [3, 2], [3, 3], [5, -1], [-2, 4]
         expected_result = [[3, 3], [-2, 4]]
         expected_time = 2
         expected_memory = 256

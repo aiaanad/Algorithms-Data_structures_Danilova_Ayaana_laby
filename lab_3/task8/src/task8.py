@@ -39,8 +39,10 @@ def randomized_quicksort(a: list, l: int, r: int) -> list:
     return a
 
 
-def nearest_point(n: int, k: int, a: list) -> list:
-    a = randomized_quicksort(a, 0, n - 1)
+def nearest_point(nk: list, *a) -> list:
+    n, k = nk[0], nk[1]
+    arr = list(a)
+    a = randomized_quicksort(arr, 0, n - 1)
     return a[:k]
 
 

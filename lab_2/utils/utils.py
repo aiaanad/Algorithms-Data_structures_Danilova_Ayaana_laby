@@ -5,12 +5,42 @@ import sys
 sys.path.append(os.path.join(os.getcwd(), '..'))
 
 
+def is_number(string):
+    try:
+        float(string)
+        return True
+    except ValueError:
+        return False
+
+
+def convert_one_elem(string):
+    if is_number(string):
+        if '.' in string:
+            return float(string)
+        return int(string)
+
+    return string
+
+
+def convert_list(string):
+    list_ = []
+    for elem in string.rstrip().split():
+        list_.append(convert_one_elem(elem))
+    return list_
+
+
+def convert_line(string):
+    if len(string.split()) == 1:
+        return (convert_one_elem(string),)
+    return (convert_list(string), )
+
+
 def f_read(current_task):
     path = pathlib.Path(__file__).parent.parent.joinpath(current_task, 'txtf', 'input.txt')
     args = ()
     f = open(path, 'r')
     for line in f:
-        args += ((int(line),) if len(line.split()) == 1 else ([int(elem) for elem in line.split()],))
+        args += convert_line(line)
     f.close()
     return args
 

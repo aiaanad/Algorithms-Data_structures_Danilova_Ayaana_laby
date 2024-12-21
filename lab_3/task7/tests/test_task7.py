@@ -7,7 +7,7 @@ from lab_3.task7.src.task7 import radix_sort
 class TestRadixSort(unittest.TestCase):
     def test_should_radix_sort_args1(self):
         # given
-        data = 3, 3, 1, [['b', 'b', 'b'], ['a', 'b', 'a'], ['b', 'a', 'a']]
+        data = [3, 3, 1], 'bbb', 'aba', 'baa'
         expected_result = [2, 3, 1]
         expected_time = 2
         expected_memory = 256
@@ -29,7 +29,7 @@ class TestRadixSort(unittest.TestCase):
 
     def test_should_radix_sort_args2(self):
         # given
-        data = 3, 3, 2, [['b', 'b', 'b'], ['a', 'b', 'a'], ['b', 'a', 'a']]
+        data = [3, 3, 2], 'bbb', 'aba', 'baa'
         expected_result = [3, 2, 1]
         expected_time = 2
         expected_memory = 256
@@ -51,7 +51,7 @@ class TestRadixSort(unittest.TestCase):
 
     def test_should_radix_sort_args3(self):
         # given
-        data = 3, 3, 3, [['b', 'b', 'b'], ['a', 'b', 'a'], ['b', 'a', 'a']]
+        data = [3, 3, 3], 'bbb', 'aba', 'baa'
         expected_result = [2, 3, 1]
         expected_time = 2
         expected_memory = 256

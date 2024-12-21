@@ -2,7 +2,7 @@ from pathlib import Path
 from lab_3.utils.utils import work
 
 
-def qsort(a: list, left: int, right: int) -> list:
+def qsort(a: list, left, right) -> list:
     key = a[(left + right) // 2]
     i = left
     j = right
