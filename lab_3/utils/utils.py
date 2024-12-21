@@ -61,7 +61,7 @@ def f_read(current_task):
 
 def f_write(current_task, answer):
     path = pathlib.Path(__file__).parent.parent.joinpath(current_task, 'txtf', 'output.txt')
-    f = open(path, 'a')
+    f = open(path, 'w')
     if type(answer) is list:
         answer = ' '.join(map(str, answer)) + '\n'
     elif type(answer) is int:
