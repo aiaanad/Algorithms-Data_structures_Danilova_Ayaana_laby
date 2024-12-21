@@ -1,5 +1,5 @@
 from pathlib import Path
-from lab_7.utils.utils import work
+from lab_6.utils.utils import work
 
 
 def lis(n, arr):

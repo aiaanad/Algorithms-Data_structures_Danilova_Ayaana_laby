@@ -1,6 +1,6 @@
 from pathlib import Path
 from collections import defaultdict
-from lab_7.utils.utils import work
+from lab_6.utils.utils import work
 
 
 def simple_calculator(n):

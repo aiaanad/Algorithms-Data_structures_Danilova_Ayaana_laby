@@ -23,7 +23,7 @@ def isValid(s: str) -> bool:
 def bracket_sequence(n, *data):
     ans = []
     for seq in data:
-        if isValid(seq[0]):
+        if isValid(seq):
             ans.append('YES')
         else:
             ans.append('NO')

@@ -27,7 +27,8 @@ def main(n, *operations):
     my_queue = Stack()
     max_values = []
     for f in operations:
-        match f[0]:
+        print(f)
+        match f:
             case 'push':
                 my_queue.push(f[1])
             case 'pop':

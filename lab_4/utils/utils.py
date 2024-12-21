@@ -1,4 +1,5 @@
 import pathlib
+from lab_1.utils.utils import convert_first_numbers, convert_line
 
 
 def f_read(current_task):
@@ -6,12 +7,10 @@ def f_read(current_task):
     args = ()
     f = open(path, 'r')
     for line in f:
-        line = line.rstrip().split()
-        if args == ():
-            for elem in line:
-                args += (int(elem),)
+        if args == () and line[0].isdigit():
+            args += convert_first_numbers(line)
         else:
-            args += ([int(elem) if elem.isdigit() else elem for elem in line],)
+            args += convert_line(line)
     f.close()
     return args
 
@@ -23,7 +22,10 @@ def f_write(current_task, answer):
         if len(answer) > 1:
             answer = '\n'.join(map(str, answer)) + '\n'
         else:
-            answer = str(answer[0]) + '\n'
+            if answer:
+                answer = str(answer[0]) + '\n'
+            else:
+                answer = ''
     f.write(answer)
     f.close()
 
