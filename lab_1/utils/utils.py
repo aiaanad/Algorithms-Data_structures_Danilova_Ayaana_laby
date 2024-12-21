@@ -71,9 +71,19 @@ def f_write(current_task, answer):
     f.close()
 
 
+def f_print(cur_lab, cur_task, args, res):
+    print(
+        f'''LAB NUMBER: {cur_lab[4:]}
+            TASK NUMBER: {cur_task[4:]}
+                    INPUT DATA: {args}
+                    OUTPUT DATA: {res}
+
+            ''')
+
+
 def work(current_lab, current_task, func, dop=None):
     input_data = f_read(current_task)
-    args = None
+    args = ()
     if dop is not None:
         if dop == 0:
             args = (input_data[1],) + (0,) + (len(input_data[1]) - 1,)
@@ -82,15 +92,11 @@ def work(current_lab, current_task, func, dop=None):
             input_data[0][1] = [input_data[0][1] // 10 ** i % 10 for i in range(len(str(input_data[0][1])) - 1, -1, -1)]
             args = input_data[0][0], input_data[0][1]
     else:
-        args = tuple(input_data)
+        args = input_data
+
     result = func(*args)
     f_write(current_task, result)
-    print(
-        f'''LAB NUMBER: {current_lab[4:]}
-        TASK NUMBER: {current_task[4:]}
-                INPUT DATA: {args}
-                OUTPUT DATA: {result}
-                
-        ''')
+    f_print(current_lab, current_task, args, result)
+
 
 

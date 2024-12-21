@@ -1,5 +1,5 @@
 import pathlib
-from lab_1.utils.utils import convert_line
+from lab_1.utils.utils import convert_line, f_print
 
 
 def f_read(current_task):
@@ -31,10 +31,4 @@ def work(current_lab, current_task, func, *dop):
 
     result = func(*args)
     f_write(current_task, result)
-    print(
-        f'''LABA_NUMBER: {current_lab[4:]}
-            TASK NUMBER: {current_task[4:]}
-                    INPUT DATA: {args}
-                    OUTPUT DATA: {result}
-
-            ''')
+    f_print(current_lab, current_task, args, result)
