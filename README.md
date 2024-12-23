@@ -47,10 +47,10 @@
    ```
 3. **Запуску всех лабораторных**
     ```bash
-   for f in {1..7}; do cd lab_"$f" && for l in task*/src/*.py; do python "$l" ; done; cd .. ; done
+   for f in lab_*/task*/src/task*; do f=${f%.py}; python -m ${f////.}; done
 
 
 4. **Запуску всех тестов**
     ```bash
-        python -m unittest discover -v
+   for f in lab_*/task*/tests/test_task*; do f=${f%.py}; python -m ${f////.}; done
    
