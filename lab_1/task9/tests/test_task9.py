@@ -7,7 +7,7 @@ from lab_1.task9.src.task9 import binary_addition
 class TestBinaryAddition(unittest.TestCase):
     def test_should_binary_addition(self):
         # given
-        data = [1, 1, 0, 0], [1, 0, 1, 1]
+        data = 1100, 1011
         expected_result = [1, 0, 1, 1, 1]
         expected_time = 2
         expected_memory = 256

@@ -1,5 +1,5 @@
 from pathlib import Path
-from lab_2.utils.utils import work
+from lab_1.utils.utils import work
 
 
 def binary_search(len1: int, search_in: list, len2: int, the_search: list):

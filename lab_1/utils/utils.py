@@ -26,7 +26,7 @@ def convert_list(string):
 
 
 def is_first_numbers(string):
-    if len(string.split()) <= 2:
+    if len(string.split()) == 2:
         l_ = string.split()
         if is_number(l_[0]) and is_number(l_[1]):
             return True
@@ -48,18 +48,19 @@ def convert_line(string):
     return (convert_list(string),)
 
 
-def f_read(current_task):
-    path = pathlib.Path(__file__).parent.parent.joinpath(current_task, 'txtf', 'input.txt')
+def f_read(path):
     args = ()
     f = open(path, 'r')
     for line in f:
-        args += convert_line(line)
+        if args == () and is_first_numbers(line):
+            args += convert_first_numbers(line)
+        else:
+            args += convert_line(line)
     f.close()
     return args
 
 
-def f_write(current_task, answer):
-    path = pathlib.Path(__file__).parent.parent.joinpath(current_task, 'txtf', 'output.txt')
+def f_write(path, answer):
     f = open(path, 'w')
     if type(answer) is list:
         answer = ' '.join(map(str, answer)) + '\n'
@@ -71,32 +72,23 @@ def f_write(current_task, answer):
     f.close()
 
 
-def f_print(cur_lab, cur_task, args, res):
+def base(current_lab, current_task, func, read_path, write_path, dop=None):
+    input_data = f_read(read_path)
+    if dop:
+        args = (input_data[1],) + (0,) + (len(input_data[1]) - 1,)
+    else:
+        args = input_data
     print(
-        f'''LAB NUMBER: {cur_lab[4:]}
-            TASK NUMBER: {cur_task[4:]}
-                    INPUT DATA: {args}
-                    OUTPUT DATA: {res}
+        f'''LAB NUMBER: {current_lab[4:]}
+                TASK NUMBER: {current_task[4:]}
+                        INPUT DATA: {args}''')
 
-            ''')
+    result = func(*args)
+    f_write(write_path, result)
+    print(f'''                        OUTPUT DATA: {result}''')
 
 
 def work(current_lab, current_task, func, dop=None):
-    input_data = f_read(current_task)
-    args = ()
-    if dop is not None:
-        if dop == 0:
-            args = (input_data[1],) + (0,) + (len(input_data[1]) - 1,)
-        if dop == 1:
-            input_data[0][0] = [input_data[0][0] // 10 ** i % 10 for i in range(len(str(input_data[0][0])) - 1, -1, -1)]
-            input_data[0][1] = [input_data[0][1] // 10 ** i % 10 for i in range(len(str(input_data[0][1])) - 1, -1, -1)]
-            args = input_data[0][0], input_data[0][1]
-    else:
-        args = input_data
-
-    result = func(*args)
-    f_write(current_task, result)
-    f_print(current_lab, current_task, args, result)
-
-
-
+    read_path = pathlib.Path(__file__).parent.parent.parent.joinpath(current_lab, current_task, 'txtf', 'input.txt')
+    write_path = pathlib.Path(__file__).parent.parent.parent.joinpath(current_lab, current_task, 'txtf', 'output.txt')
+    base(current_lab, current_task, func, read_path, write_path, dop)

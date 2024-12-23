@@ -1,6 +1,6 @@
 from pathlib import Path
 from collections import defaultdict
-from lab_6.utils.utils import work
+from lab_4.utils.utils import work
 
 
 def coin_exchange(money, k, coins):

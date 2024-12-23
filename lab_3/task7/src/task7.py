@@ -1,5 +1,5 @@
 from pathlib import Path
-from lab_3.utils.utils import work
+from lab_1.utils.utils import work
 
 
 def radix_sort(nmk: list, *a) -> list:

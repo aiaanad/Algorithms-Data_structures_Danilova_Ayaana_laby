@@ -1,5 +1,5 @@
 from pathlib import Path
-from lab_2.utils.utils import work
+from lab_1.utils.utils import work
 
 
 def merge(arr, l, m, r):
@@ -51,6 +51,6 @@ def mergeSort(arr, l, r):
     return arr
 
 
-work(Path(__file__).parts[-4], Path(__file__).stem, mergeSort, 0)
+work(Path(__file__).parts[-4], Path(__file__).stem, mergeSort, 1)
 
 

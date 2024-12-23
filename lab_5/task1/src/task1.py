@@ -1,4 +1,4 @@
-from lab_5.utils.utils import work
+from lab_4.utils.utils import work
 from pathlib import Path
 
 

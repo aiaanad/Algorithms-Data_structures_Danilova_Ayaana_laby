@@ -1,5 +1,5 @@
 from pathlib import Path
-from lab_2.utils.utils import work
+from lab_1.utils.utils import work
 
 
 def merge(arr, left, m, r):

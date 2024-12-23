@@ -1,6 +1,6 @@
 from pathlib import Path
 import sys
-from lab_7.utils.utils import work
+from lab_4.utils.utils import work
 
 sys.setrecursionlimit(10 ** 6)
 

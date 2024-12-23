@@ -1,5 +1,5 @@
 from pathlib import Path
-from lab_6.utils.utils import work
+from lab_4.utils.utils import work
 from lab_6.task1.src.task1 import HashTable
 
 

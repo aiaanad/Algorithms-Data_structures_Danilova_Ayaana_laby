@@ -1,7 +1,7 @@
 import random
 from math import sqrt
 from pathlib import Path
-from lab_3.utils.utils import work
+from lab_1.utils.utils import work
 
 
 def distance(t: list) -> float:
@@ -39,8 +39,8 @@ def randomized_quicksort(a: list, l: int, r: int) -> list:
     return a
 
 
-def nearest_point(nk: list, *a) -> list:
-    n, k = nk[0], nk[1]
+def nearest_point(n, k, *a) -> list:
+    # n, k = nk[0], nk[1]
     arr = list(a)
     a = randomized_quicksort(arr, 0, n - 1)
     return a[:k]

@@ -1,8 +1,1 @@
-
-no
-yes
-yes
-no
-
-add help
-
+ no yes yes no  add help 

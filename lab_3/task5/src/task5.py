@@ -1,5 +1,5 @@
 from pathlib import Path
-from lab_3.utils.utils import work
+from lab_1.utils.utils import work
 from lab_3.task1.src.task1 import partition3
 
 
